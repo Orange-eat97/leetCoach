@@ -1,0 +1,1 @@
+The `before/` and `after/` folders are created by the red-team runner. Import their individual JSON transcripts into the evaluation workbench for human checking and take real interface screenshots for the report appendix.

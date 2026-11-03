@@ -1,3 +1,5 @@
+import EvaluationPanel from './EvaluationPanel'
+import LiveCoach from './LiveCoach'
 import { useEffect, useMemo, useRef, useState, type ReactElement } from 'react'
 import { flows, stageLabels, type DemoFlow, type Turn } from './demoFlows'
 
@@ -315,7 +317,7 @@ function CodePanel({ stage, runStatus, onRun, collapsed, onToggle }: { stage: nu
   )
 }
 
-export default function App() {
+function ScriptedPrototype() {
   const [flowId, setFlowId] = useState<DemoFlow['id']>('fast')
   const [visibleCount, setVisibleCount] = useState(1)
   const [draft, setDraft] = useState('')
@@ -372,4 +374,16 @@ export default function App() {
       </div>
     </div>
   )
+}
+
+export default function App() {
+  const [mode, setMode] = useState<'live'|'demo'|'evaluation'>('live')
+  return <>
+    <nav aria-label="AlgoCoach application mode" style={{position:'fixed',top:8,right:10,zIndex:99999,display:'flex',gap:6,background:'#fff',padding:6,border:'1px solid #cbd5e1',borderRadius:8,boxShadow:'0 2px 10px #0001'}}>
+      <button aria-pressed={mode==='live'} onClick={()=>setMode('live')} style={{background:mode==='live'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>Live Tutor</button>
+      <button aria-pressed={mode==='evaluation'} onClick={()=>setMode('evaluation')} style={{background:mode==='evaluation'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>Evaluation</button>
+      <button aria-pressed={mode==='demo'} onClick={()=>setMode('demo')} style={{background:mode==='demo'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>A1 Demo</button>
+    </nav>
+    {mode==='live'?<LiveCoach/>:mode==='evaluation'?<EvaluationPanel/>:<ScriptedPrototype/>}
+  </>
 }

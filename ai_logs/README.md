@@ -1,0 +1,1 @@
+Place your REAL conversations with AI tools used for this assignment here, as exported transcripts or shared links. The assignment requires the user's own AI-assistance records. This folder does not contain simulated or invented AI logs.

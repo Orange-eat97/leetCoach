@@ -6,7 +6,15 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "node server/index.mjs",
+    "test:a2": "node --test tests/*.test.mjs",
+    "collect:a2": "node testing/generate_conversations.mjs",
+    "judge:a2": "node testing/run_judge.mjs",
+    "agreement:a2": "node testing/agreement.mjs",
+    "redteam:a2": "node testing/run_redteam.mjs",
+    "audit:a2": "node testing/audit_dataset.mjs",
+    "summary:a2": "node testing/summary.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",

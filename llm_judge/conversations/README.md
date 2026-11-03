@@ -1,0 +1,1 @@
+This directory is intentionally empty of results. Run `npm run collect:a2` with an LLM-enabled live tutor and manually verify all resulting conversations. Do not treat rule-only fallback or scripted A1 outputs as authentic LLM conversations.
