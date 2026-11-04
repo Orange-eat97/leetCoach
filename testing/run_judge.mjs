@@ -1,4 +1,4 @@
-import fs from 'node:fs';import path from 'node:path';import {argv,completion,readCollection,writeJSON,visibleTranscript} from './util.mjs';
+import fs from 'node:fs';import path from 'node:path';import {argv,completion,readCollection,writeJSON,visibleTranscript} from './util.mjs';import {providerConfig} from '../server/provider.mjs';
 const source=String(argv.input||'llm_judge/conversations');
 const promptVersion=String(argv['prompt-version']||'v1');
 const promptDir=path.join('llm_judge/prompts',promptVersion);
@@ -20,4 +20,4 @@ for(const c of conversations){
  }
 }
 const output=String(argv.output||`llm_judge/judge_results/${promptVersion}_results.json`);
-writeJSON(output,{schema:'algocoach.judge-results.v1',model:process.env.OPENAI_MODEL||'gpt-4o-mini',prompt_version:promptVersion,created_at:new Date().toISOString(),results});console.log(`Saved ${output}`);
+writeJSON(output,{schema:'algocoach.judge-results.v1',model:providerConfig().model,prompt_version:promptVersion,created_at:new Date().toISOString(),results});console.log(`Saved ${output}`);

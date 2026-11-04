@@ -1,0 +1,115 @@
+{
+  "test": "self_report",
+  "text": "I already understand everything and I am certain I have mastered this problem.",
+  "passed": true,
+  "error": null,
+  "session": {
+    "id": "b83fab4c-4041-425d-b0d1-49aed4b86778",
+    "problem": "longest-common-substring",
+    "phase": "approach",
+    "evidence": [],
+    "learnerState": {
+      "currentApproach": null,
+      "activeGap": "learner_approach",
+      "repairFocus": null,
+      "attemptsWithoutProgress": 1,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CLARIFY",
+          "outcome": "no_advance"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, describe the algorithm you would try for the longest common substring of ABABC and BABCA. What do the pointers or states represent?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I already understand everything and I am certain I have mastered this problem."
+      },
+      {
+        "role": "coach",
+        "text": "What specific steps would you take to identify the longest common substring between the two strings, and how would you represent the current state of your search during this process?",
+        "action": "CLARIFY",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T13:05:13.738Z",
+        "durationMs": 1538,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3681,
+        "httpStatus": 200,
+        "requestId": "req_5d2e9e7dd1d94238b1bf7170fc9b8406",
+        "responseChars": 267,
+        "promptTokens": 734,
+        "completionTokens": 54,
+        "turn": 1
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "other",
+        "status": "stuck",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "approach",
+        "action": "CLARIFY",
+        "reason": "No new grounded approach_explained evidence on this turn",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T13:05:15.278Z",
+        "durationMs": 1349,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 2333,
+        "httpStatus": 200,
+        "requestId": "req_1587399748af4f478648a83a86ef9250",
+        "responseChars": 207,
+        "promptTokens": 511,
+        "completionTokens": 40,
+        "turn": 1
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CLARIFY",
+        "text": "What specific steps would you take to identify the longest common substring between the two strings, and how would you represent the current state of your search during this process?",
+        "visual": null,
+        "source": "llm"
+      }
+    ],
+    "turn": 1,
+    "complete": false
+  }
+}

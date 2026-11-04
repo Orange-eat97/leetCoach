@@ -1,0 +1,9 @@
+{
+  "description": "Actual learner message and model interpretation from observed transfer failure; API request metadata intentionally omitted.",
+  "problem": "longest-common-substring",
+  "phaseBefore": "transfer",
+  "learnerText": "For two integer arrays, I can use the same dp[i][j] as the length of the common contiguous subarray ending at those indices. Equal integers extend the diagonal by one, unequal integers reset it to zero. I track the largest value.",
+  "observedInterpretation": {"intent":"request_answer","status":"progressing","ambiguous":false,"evidence":[]},
+  "expectedEvidenceKind": "transfer_applied",
+  "expectedPhase": "complete"
+}

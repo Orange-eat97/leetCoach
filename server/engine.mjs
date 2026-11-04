@@ -66,7 +66,9 @@ function adaptAction(action, state, interpreted, learnerText) {
     if (/smaller|example|counterexample|trace/i.test(learnerText)) return 'CHALLENGE';
     return 'HINT';
   }
-  if (interpreted.intent === 'request_answer') return 'HINT';
+  if (interpreted.requestsFullAnswer === true || (interpreted.requestsFullAnswer == null && interpreted.intent === 'request_answer')) return 'HINT';
+  // Repeated failed abstraction attempts should not loop over the same template.
+  if (action === 'ASK_ABSTRACTION' && attempts >= 2) return attempts >= 5 ? 'OFFER_CHOICE' : 'HINT';
   if (action === 'CLARIFY' && attempts >= 3) return 'OFFER_CHOICE';
   if (action === 'CLARIFY' || action === 'ASK_TRANSFER' || action === 'ASK_ABSTRACTION' || action === 'COMPLETE') return action;
   if (attempts >= 5) return 'OFFER_CHOICE';
@@ -90,7 +92,9 @@ export function transition(previous, learnerText, interpretation = {}) {
   const ambiguous = interpretation.ambiguous === true || interpretation.intent === 'unclear';
   const status = interpretation.status || 'unknown';
   const difficulty = status === 'stuck' || status === 'incorrect';
-  const candidate = (interpretation.intent === 'request_answer' ? [] : (Array.isArray(interpretation.evidence) ? interpretation.evidence : []))
+  // Evidence is assessed separately from requests for a complete answer. A mistaken
+  // intent label must never erase a correct, quote-grounded reasoning explanation.
+  const candidate = (Array.isArray(interpretation.evidence) ? interpretation.evidence : [])
     .filter(item => validatedEvidence(item, learnerText));
   const contradictions = !ambiguous && Array.isArray(interpretation.contradictions)
     ? interpretation.contradictions.filter(item => validatedEvidence(item, learnerText) &&
@@ -150,14 +154,17 @@ export function transition(previous, learnerText, interpretation = {}) {
   recordSupport(state, action, from, state.phase);
   if (accepted.length && from === state.phase) state.learnerState.attemptsWithoutProgress = 0; // successful prerequisite repair
   if (state.phase === from) action = adaptAction(action, state, interpretation, learnerText);
-  if (interpretation.intent === 'request_answer' && !state.complete) {
-    action = 'HINT'; reason = 'Answer request does not bypass evidence gates';
+  // An explicit answer request with NO qualifying evidence receives a hint. It must
+  // not suppress accepted current-turn evidence, repair, or completion.
+  const requestedAnswer = interpretation.requestsFullAnswer === true || (interpretation.requestsFullAnswer == null && interpretation.intent === 'request_answer');
+  if (requestedAnswer && state.phase === from && !state.learnerState.repairFocus && !ambiguous) {
+    action = 'HINT'; reason = 'Answer request without qualifying evidence does not bypass the learning checkpoint';
   }
   state.learnerState.supportHistory.at(-1).action = action;
   state.lastAction = action;
   const eventEvidence = accepted.map(item => ({kind: item.kind, quote: item.quote}));
   state.events.push({kind:'interpretation',turn:state.turn,intent:interpretation.intent || 'unknown',
-    status,ambiguous, evidence:eventEvidence, repairFocus:state.learnerState.repairFocus});
+    status,ambiguous,requestsFullAnswer:requestedAnswer,evidence:eventEvidence,repairFocus:state.learnerState.repairFocus});
   state.events.push({kind:'policy_decision',turn:state.turn,from,to:state.phase,action,reason,
     attemptsWithoutProgress:state.learnerState.attemptsWithoutProgress});
   return {state, decision:{action,from,to:state.phase,reason,evidence:accepted}};
@@ -174,6 +181,11 @@ export function validateReply(reply, decision) {
   const t = reply.text;
   if (/```|\bdef\s+\w+\s*\(|\bclass\s+Solution\b|\breturn\s+s1\s*\[|\bfor\s+\w+\s+in\s+range\s*\(/i.test(t)) return false;
   if (decision.action !== 'COMPLETE' && /(?:here is|here's|the full|complete)\s+(?:the\s+)?(?:solution|code|implementation)/i.test(t)) return false;
+  // Keep gap support focused on alignment coverage and transfer support on the
+  // named near-transfer task rather than unrelated implementation details.
+  if (decision.to === 'gap' && /\b(?:initializ(?:e|ation)|boundar(?:y|ies)|out.of.bounds|first row|first column)\b/i.test(t)) return false;
+  if (decision.to === 'transfer' && ['HINT','FEEDBACK'].includes(decision.action) &&
+      /\b(?:negative numbers?|zeros?|new (?:constraints?|problems?))\b/i.test(t)) return false;
   return true;
 }
 export function fallbackReply(state, decision) {
@@ -181,14 +193,14 @@ export function fallbackReply(state, decision) {
   switch (decision.action) {
     case 'CLARIFY': text = 'Could you clarify exactly what the two pointers or states represent, and how they change after a mismatch?'; break;
     case 'CHALLENGE': text = 'Test your approach on shifted starting positions: how does it discover BABC in ABABC and BABCA? Explain which alignments it checks.'; break;
-    case 'HINT': text = state.phase === 'transfer' ? 'Try tracing one shifted equal run in the arrays. What must be remembered at each pair of positions?':state.phase === 'solution' ? 'Check whether your method covers every starting alignment without allowing gaps. Can you state its invariant?' : 'Trace one counterexample and identify precisely which possible match your rule misses.';break;
+    case 'HINT': text = state.phase === 'transfer' ? 'For the given integer arrays, explain what your state represents, how it changes for equal versus unequal elements, and how you find the longest run.' : state.phase === 'abstraction' ? 'Beyond the strings in this example, which property of matching endpoints and contiguous runs makes your method reusable?' :state.phase === 'solution' ? 'Check whether your method covers every starting alignment without allowing gaps. Can you state its invariant?' : 'Trace one counterexample and identify precisely which possible match your rule misses.';break;
     case 'VISUALISE': text = state.phase === 'solution' ? 'This DP grid tracks contiguous runs ending at each pair. What would a mismatch do to that run?' : 'Compare BABC at the two shifted offsets. What does your original approach need to examine to find it?'; break;
     case 'REPAIR': text = 'Your latest reasoning conflicts with an earlier explanation. Can you recheck that assumption on a concrete counterexample before we continue?'; break;
     case 'OFFER_CHOICE': text = 'We seem to be revisiting the same gap. Would a smaller example, a visual trace, or a more specific hint help? You can also explain which step is unclear.'; break;
-    case 'ASK_ABSTRACTION': text = 'Without repeating code, what reusable invariant or strategy makes your method correct? When would it apply again?'; break;
+    case 'ASK_ABSTRACTION': text = 'Without repeating code or changing problems yet, what invariant or reusable principle makes your method correct? Explain when this principle would be useful.'; break;
     case 'ASK_TRANSFER': text = PROBLEM.transfer.prompt; break;
-    case 'FEEDBACK': text = 'Which state or comparison rule transfers from strings to integer arrays, and why does it still work?'; break;
-    case 'COMPLETE': text = 'You explained a transfer application. The tutoring activity is complete, although independent assessment is needed to establish lasting learning.'; break;
+    case 'FEEDBACK': text = 'Which specific state or comparison rule would you reuse for the integer-array example? Explain how you would handle both an equal pair and a mismatch.'; break;
+    case 'COMPLETE': text = 'You correctly applied your approach to contiguous matching runs in integer arrays, including how matching and mismatching elements affect the run. This completes the learning activity; it does not by itself establish long-term mastery.'; break;
     default: text = state.phase === 'solution' ? 'Describe your full method in words and justify why it handles all starting alignments and contiguity.' : 'Explain your next reasoning step and how it relates to your original idea.';
   }
   return {text, visual: decision.action === 'CHALLENGE' || (decision.action === 'VISUALISE' && state.phase === 'gap') ? 'offset'

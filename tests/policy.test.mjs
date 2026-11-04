@@ -40,10 +40,10 @@ test('cannot skip to solution with phase-inapplicable evidence',()=>{
  assert.equal(r.state.phase,'approach');assert.equal(r.state.evidence.length,0);
 });
 test('no scalar mastery score is stored',()=>{const s=newSession();assert.equal('confidence' in s,false);assert.equal('mastery' in s.learnerState,false)});
-test('answer-request intent never advances even with evidence attached',()=>{
+test('an answer request never erases independently grounded reasoning evidence',()=>{
  const s=newSession();const t='Please give full code. I would compare both strings with two pointers and advance both.';
  const r=run(s,t,[ev('approach_explained',t)],{intent:'request_answer'});
- assert.equal(r.state.phase,'approach');assert.equal(r.state.evidence.length,0);
+ assert.equal(r.state.phase,'gap');assert.equal(r.state.evidence.length,1);assert.equal(r.decision.action,'CHALLENGE');
 });
 test('after offering a choice, a visual request receives an actual visual action',()=>{
  let s=newSession();const t='I compare two strings with pointers and advance both after each comparison.';

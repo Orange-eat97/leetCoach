@@ -1,0 +1,30 @@
+[
+  {
+    "fixture": "hotfix_regression",
+    "repeat": 1,
+    "passed": true,
+    "turns": 5,
+    "error": null,
+    "output": "testing\\smoke-regression\\2026-11-04T13-04-34-125Z-hotfix_regression-run1.json"
+  },
+  {
+    "fixture": "pre_hotfix_transfer",
+    "repeat": 1,
+    "passed": true,
+    "turns": 5,
+    "error": null,
+    "output": "testing\\smoke-regression\\2026-11-04T13-04-34-125Z-pre_hotfix_transfer-run1.json"
+  },
+  {
+    "fixture": "self_report",
+    "passed": true,
+    "error": null,
+    "output": "testing\\smoke-regression\\2026-11-04T13-04-34-125Z-self_report.json"
+  },
+  {
+    "fixture": "answer_request",
+    "passed": true,
+    "error": null,
+    "output": "testing\\smoke-regression\\2026-11-04T13-04-34-125Z-answer_request.json"
+  }
+]

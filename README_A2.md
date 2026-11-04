@@ -17,6 +17,31 @@ npm run build             # should be run in your complete original repo
 
 Set the secret only for the Node backend (PowerShell: `$env:OPENAI_API_KEY="..."`; bash: `export OPENAI_API_KEY="..."`). Do not put secrets in `.env` files committed to git, frontend code or Vite environment variables. Optional `OPENAI_MODEL` (defaults to `gpt-4o-mini`) and `OPENAI_BASE_URL` (OpenAI-compatible chat-completions API base).
 
+### SoCLaaS
+
+Use the dedicated SoCLaaS variables so the backend automatically selects the SoCLaaS gateway. In PowerShell, set the key and then list the model IDs available to it:
+
+```powershell
+$secret = Read-Host "Paste SoCLaaS API key" -AsSecureString
+$env:SOCLAAS_API_KEY = [System.Net.NetworkCredential]::new("", $secret).Password
+Remove-Variable secret
+
+$models = Invoke-RestMethod `
+  -Uri "https://soclaas-api.comp.nus.edu.sg/v1/models" `
+  -Headers @{ Authorization = "Bearer $env:SOCLAAS_API_KEY" }
+$models.data | Select-Object id
+```
+
+Copy one chat-capable model ID from that output, then start the backend in the same terminal:
+
+```powershell
+$env:SOCLAAS_MODEL = "YOUR_MODEL_ID"
+Remove-Item Env:OPENAI_API_KEY -ErrorAction SilentlyContinue
+npm.cmd run server
+```
+
+`SOCLAAS_API_KEY` automatically uses `https://soclaas-api.comp.nus.edu.sg/v1`. `OPENAI_BASE_URL` remains available as an explicit override.
+
 Two terminals:
 
 ```bash
@@ -24,7 +49,7 @@ npm run server
 npm run dev
 ```
 
-Open the Vite page. The top-right mode navigation switches **Live Tutor / Evaluation / A1 Demo**. In Live Tutor, each actual learner message is evaluated and answered through the backend. The A1 Demo remains deliberately scripted and is **not** valid for Assignment 2 testing.
+Open `http://127.0.0.1:5173/`. Visiting the backend root at `http://127.0.0.1:3001/` redirects there as a convenience. The top-right mode navigation switches **Live Tutor / Evaluation / A1 Demo**. In Live Tutor, each actual learner message is evaluated and answered through the backend. The A1 Demo remains deliberately scripted and is **not** valid for Assignment 2 testing.
 
 Without `OPENAI_API_KEY`, the server uses `rule-fallback` exclusively for offline development. Do not report rule-fallback as model-based tutoring or as LLM judge/red-team evidence.
 
@@ -39,6 +64,12 @@ Without `OPENAI_API_KEY`, the server uses `rule-fallback` exclusively for offlin
 7. **UI renderer** deterministically renders `offset` or `dp` visuals; the exported transcript includes actual visible text and visual identifiers, plus policy events for auditing.
 
 **Limitations:** The evidence interpreter may misclassify a learner's correct/incorrect statement; provenance matching is not independent semantic validation. The code/pseudocode guardrail is intentionally incomplete and must be red-teamed. Sessions are stored only in process memory; export important live sessions. No numeric mastery score or longitudinal knowledge tracing is claimed.
+
+### Model request diagnostics
+
+Live Tutor includes a collapsible **Diagnostics** panel. Every interpreter and reply-generator call records safe metadata in the exported session events: provider, model, stage, endpoint host, start time, elapsed milliseconds, timeout limit, outcome, HTTP status, provider request ID, and token counts when supplied. Failures also retain the attempted learner message and a sanitized error. API keys, hidden prompts, and model response contents are never recorded.
+
+The diagnostic event kinds are `model_request` and `turn_failed`. A failed interpretation remains outside the learner transcript and phase progression, but its diagnostic events stay attached to the session for reproduction.
 
 ## Assignment 2: collect at least 20 genuine multi-turn conversations
 
