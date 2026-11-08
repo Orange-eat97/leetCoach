@@ -1,4 +1,5 @@
 import EvaluationPanel from './EvaluationPanel'
+import ReplayCoach from './ReplayCoach'
 import LiveCoach from './LiveCoach'
 import { useEffect, useMemo, useRef, useState, type ReactElement } from 'react'
 import { flows, stageLabels, type DemoFlow, type Turn } from './demoFlows'
@@ -377,13 +378,15 @@ function ScriptedPrototype() {
 }
 
 export default function App() {
-  const [mode, setMode] = useState<'live'|'demo'|'evaluation'>('live')
+  const initialMode=new URLSearchParams(window.location.search).get('mode')
+  const [mode, setMode] = useState<'live'|'demo'|'evaluation'|'replay'>(initialMode==='replay'?'replay':'live')
   return <>
     <nav aria-label="AlgoCoach application mode" style={{position:'fixed',top:8,right:10,zIndex:99999,display:'flex',gap:6,background:'#fff',padding:6,border:'1px solid #cbd5e1',borderRadius:8,boxShadow:'0 2px 10px #0001'}}>
       <button aria-pressed={mode==='live'} onClick={()=>setMode('live')} style={{background:mode==='live'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>Live Tutor</button>
       <button aria-pressed={mode==='evaluation'} onClick={()=>setMode('evaluation')} style={{background:mode==='evaluation'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>Evaluation</button>
+      <button aria-pressed={mode==='replay'} onClick={()=>setMode('replay')} style={{background:mode==='replay'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>Session Replay</button>
       <button aria-pressed={mode==='demo'} onClick={()=>setMode('demo')} style={{background:mode==='demo'?'#dbeafe':'#fff',border:'1px solid #cbd5e1',borderRadius:5,padding:'5px 9px'}}>A1 Demo</button>
     </nav>
-    {mode==='live'?<LiveCoach/>:mode==='evaluation'?<EvaluationPanel/>:<ScriptedPrototype/>}
+    {mode==='live'?<LiveCoach/>:mode==='evaluation'?<EvaluationPanel/>:mode==='replay'?<ReplayCoach/>:<ScriptedPrototype/>}
   </>
 }

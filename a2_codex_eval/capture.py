@@ -122,12 +122,32 @@ class Recorder:
             if self.require_ui:raise RuntimeError(f'REQUIRED live UI screenshot failed for {name}: {e}')
             print('UI screenshot unavailable:',name,str(e)[:180]);return False
         return True
+    def live_replay(self,file,name,caption,message=0):
+        try:
+            replay_url=self.url+('&' if '?' in self.url else '?')+'mode=replay'
+            self.page.goto(replay_url,wait_until='domcontentloaded',timeout=10000)
+            self.page.locator('.lc-replay').wait_for(timeout=8000)
+            self.page.locator('#lc-replay-file').set_input_files(str(Path(file).resolve()))
+            self.page.locator('.lc-message').first.wait_for(timeout=9000)
+            if message:
+                messages=self.page.locator('.lc-message')
+                if message<1 or message>messages.count():raise RuntimeError(f'Requested message {message}, but transcript has {messages.count()} messages')
+                messages.nth(message-1).evaluate("el => { const pane=el.closest('.lc-scroll'); if (pane) pane.scrollTop=Math.max(0,el.offsetTop-pane.offsetTop-28); }")
+            self.page.wait_for_timeout(250)
+            self.page.screenshot(path=str(self.out/f'{safe(name)}.png'),full_page=True,animations='disabled')
+            self.records=[r for r in self.records if r.get('png')!=f'{safe(name)}.png']
+            self.records.append({'png':f'{safe(name)}.png','caption':caption,'capture_type':'actual_running_algocoach_read_only_replay_UI','url':replay_url,'source_json':str(Path(file).resolve())})
+        except Exception as e:
+            if self.require_ui:raise RuntimeError(f'REQUIRED replay UI screenshot failed for {name}: {e}')
+            print('Replay UI screenshot unavailable:',name,str(e)[:180]);return False
+        return True
 
 def main():
     p=argparse.ArgumentParser(description='Capture genuine AlgoCoach assessment evidence with browser screenshots')
-    p.add_argument('command',choices=['example','single','redteam','judge','agreement','all'])
+    p.add_argument('command',choices=['example','single','replay','redteam','judge','agreement','all'])
     p.add_argument('--repo',default='.')
     p.add_argument('--file',default='',help='Single genuine exported conversation for immediate screenshot')
+    p.add_argument('--message',type=int,default=0,help='For replay captures, scroll the conversation pane to this 1-based message number')
     p.add_argument('--round',choices=['before','after'],default='before')
     p.add_argument('--version',default='a2_v1')
     p.add_argument('--url',default='http://127.0.0.1:5173/')
@@ -135,6 +155,14 @@ def main():
     args=p.parse_args();repo=Path(args.repo).resolve()
     r=Recorder(repo,args.url,args.require_ui)
     try:
+        if args.command=='replay':
+            if not args.file:raise RuntimeError('--file must point to an actual saved CUI test JSON')
+            f=Path(args.file).resolve();c=read(f)
+            case_id=c.get('id',f.stem)
+            cap=f"Frontend replay of recorded case {case_id}; tutor turns came from the running CUI and learner turns came from the recorded test generator."
+            suffix=f'_message-{args.message}' if args.message else ''
+            if args.message:cap+=f' Conversation pane positioned at message {args.message}.'
+            r.live_replay(f,'REPLAY_'+safe(case_id)+suffix,cap,args.message)
         if args.command=='single':
             if not args.file:raise RuntimeError('--file must point to an actual saved CUI test JSON')
             f=Path(args.file).resolve();c=read(f)

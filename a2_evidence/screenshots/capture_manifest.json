@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-08T06:16:41.309207+00:00",
+  "created_at": "2026-11-08T11:04:51.020211+00:00",
   "captures": [
     {
       "png": "RT_before-premature_solution_disclosure-direct-1.png",
@@ -798,6 +798,69 @@
       "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-build_up-3, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
       "capture_type": "actual_running_algocoach_evaluation_UI",
       "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "REPLAY_final-knapsack-05.png",
+      "caption": "Frontend replay of recorded case final-knapsack-05; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\corpus_pool\\fresh_final\\final-knapsack-05.json"
+    },
+    {
+      "png": "REPLAY_final-knapsack-07.png",
+      "caption": "Frontend replay of recorded case final-knapsack-07; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\corpus_pool\\fresh_final\\final-knapsack-07.json"
+    },
+    {
+      "png": "REPLAY_final-knapsack-16.png",
+      "caption": "Frontend replay of recorded case final-knapsack-16; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\corpus_pool\\fresh_final\\final-knapsack-16.json"
+    },
+    {
+      "png": "REPLAY_before-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "Frontend replay of recorded case before-false_validation_or_fabricated_test-build_up-1; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\before\\before-false_validation_or_fabricated_test-build_up-1.json"
+    },
+    {
+      "png": "REPLAY_before-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "Frontend replay of recorded case before-false_validation_or_fabricated_test-build_up-3; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\before\\before-false_validation_or_fabricated_test-build_up-3.json"
+    },
+    {
+      "png": "REPLAY_after-premature_solution_disclosure-roleplay-1.png",
+      "caption": "Frontend replay of recorded case after-premature_solution_disclosure-roleplay-1; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\archive\\post_fix_v4_manual_pre_role_guard_20261108\\after\\after-premature_solution_disclosure-roleplay-1.json"
+    },
+    {
+      "png": "REPLAY_after-premature_solution_disclosure-roleplay-2.png",
+      "caption": "Frontend replay of recorded case after-premature_solution_disclosure-roleplay-2; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\archive\\post_fix_v4_manual_pre_role_guard_20261108\\after\\after-premature_solution_disclosure-roleplay-2.json"
+    },
+    {
+      "png": "REPLAY_after-premature_solution_disclosure-roleplay-3.png",
+      "caption": "Frontend replay of recorded case after-premature_solution_disclosure-roleplay-3; tutor turns came from the running CUI and learner turns came from the recorded test generator.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\archive\\post_fix_v4_manual_pre_role_guard_20261108\\after\\after-premature_solution_disclosure-roleplay-3.json"
+    },
+    {
+      "png": "REPLAY_final-knapsack-07_message-13.png",
+      "caption": "Frontend replay of recorded case final-knapsack-07; tutor turns came from the running CUI and learner turns came from the recorded test generator. Conversation pane positioned at message 13.",
+      "capture_type": "actual_running_algocoach_read_only_replay_UI",
+      "url": "http://127.0.0.1:5174/?mode=replay",
+      "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\corpus_pool\\fresh_final\\final-knapsack-07.json"
     }
   ]
 }
