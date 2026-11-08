@@ -1,0 +1,45 @@
+{
+  "status": "knapsack_only_dataset_pending_manual_review",
+  "generated_at": "20261107T065004Z",
+  "counts": {
+    "selected": 20,
+    "required": 20
+  },
+  "selected_ids": [
+    "knapsack-pilot-01",
+    "knapsack-pilot-02",
+    "knapsack-pilot-03",
+    "final-knapsack-04",
+    "final-knapsack-05",
+    "final-knapsack-06",
+    "final-knapsack-07",
+    "final-knapsack-08",
+    "final-knapsack-09",
+    "final-knapsack-10",
+    "final-knapsack-11",
+    "final-knapsack-12",
+    "final-knapsack-13",
+    "final-knapsack-14",
+    "final-knapsack-15",
+    "final-knapsack-16",
+    "final-knapsack-17",
+    "final-knapsack-18",
+    "final-knapsack-19",
+    "final-knapsack-20"
+  ],
+  "warnings": [
+    "The student must independently verify at least five conversations fail C1 or C2; selection does not pre-assign verdicts."
+  ],
+  "source_code": {
+    "git_commit": "ffcabd25b6fc701f0ed43df33478599479c7639b",
+    "git_tracked_files_dirty": true,
+    "core_sha256": {
+      "server/engine.mjs": "9bf972f4b020154b20dcca77cdce8c507f6165b65090c8d65a79d53d62ff4b4b",
+      "server/models.mjs": "1e706e82164c32fce5368c2078eadabdd711a1727425febd6323495c9f8e3e66",
+      "server/knapsack.mjs": "882e58e1b25d84d65f6d81ce67035a00eb0d015b45f8434f4d0e1f8655f4aedc",
+      "server/index.mjs": "bd557303de3ac654e17adebbe871cd44991d8590978d2b330fd55c85bd99746a",
+      "src/LiveCoach.tsx": "2fd4ea5e6c85c2114d03f50c0907b0002a30c64dd13881171035d17b87aea1d1",
+      "src/EvaluationPanel.tsx": "db1946f332bfbe53b48e70a55d371eba24dbeda8dbcab8b1e057dba4ef3a66a4"
+    }
+  }
+}

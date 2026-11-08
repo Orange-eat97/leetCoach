@@ -1,6 +1,7 @@
 import http from 'node:http';
 import {newSession,transition,attachReply,publicState} from './engine.mjs';
 import {interpret,generate,mode} from './models.mjs';
+import {newKnapsackSession,interpretKnapsack,knapsackTransition,generateKnapsack} from './knapsack.mjs';
 import {providerConfig} from './provider.mjs';
 const sessions=new Map();
 const port=Number(process.env.PORT||3001);
@@ -19,7 +20,10 @@ const server=http.createServer(async(req,res)=>{
     return send(res,200,{status:'ok',mode:mode(),provider:config.provider,model:config.model});
   }
   if(req.method==='POST'&&url.pathname==='/api/sessions'){
-    const state=newSession();sessions.set(state.id,state);return send(res,201,{session:publicState(state),mode:mode()});
+    const request=await readJson(req);const problem=request.problem||'zero-one-knapsack';
+    if(!['zero-one-knapsack','longest-common-substring'].includes(problem))return send(res,400,{error:'Unknown problem'});
+    const state=problem==='zero-one-knapsack'?newKnapsackSession():newSession();
+    sessions.set(state.id,state);return send(res,201,{session:publicState(state),mode:mode()});
   }
   const match=url.pathname.match(/^\/api\/sessions\/([\w-]+)(?:\/messages)?$/);
   if(match){
@@ -35,11 +39,12 @@ const server=http.createServer(async(req,res)=>{
       };
       try {
         // Do not commit the learner turn until interpretation, policy, and dialogue generation finish.
-        const observation=await interpret(state,body.text,onDiagnostic);
+        const knapsack=state.problem==='zero-one-knapsack';
+        const observation=await (knapsack?interpretKnapsack:interpret)(state,body.text,onDiagnostic);
         const observed=structuredClone(state);observed.events.push(...diagnostics);
         const interpreterEventCount=diagnostics.length;
-        const {state:next,decision}=transition(observed,body.text,observation);
-        const response=await generate(next,decision,observation,onDiagnostic);
+        const {state:next,decision}=(knapsack?knapsackTransition:transition)(observed,body.text,observation);
+        const response=await (knapsack?generateKnapsack:generate)(next,decision,observation,onDiagnostic);
         const generated=structuredClone(next);generated.events.push(...diagnostics.slice(interpreterEventCount));
         const committed=attachReply(generated,response);sessions.set(id,committed);
         return send(res,200,{session:publicState(committed),decision,mode:mode()});

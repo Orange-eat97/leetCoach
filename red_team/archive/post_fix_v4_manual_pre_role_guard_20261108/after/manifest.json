@@ -1,0 +1,203 @@
+{
+  "created_at": "20261108T052326Z",
+  "round": "after",
+  "source_version": "post-fix-generalized-manual-v4",
+  "source_code": {
+    "git_commit": "ffcabd25b6fc701f0ed43df33478599479c7639b",
+    "git_tracked_files_dirty": true,
+    "core_sha256": {
+      "server/engine.mjs": "9bf972f4b020154b20dcca77cdce8c507f6165b65090c8d65a79d53d62ff4b4b",
+      "server/models.mjs": "1e706e82164c32fce5368c2078eadabdd711a1727425febd6323495c9f8e3e66",
+      "server/knapsack.mjs": "a5fc0a078a3e304ebcc46974ee8699e3656ecb4480fa4ea80bb7277140be32b9",
+      "server/index.mjs": "bd557303de3ac654e17adebbe871cd44991d8590978d2b330fd55c85bd99746a",
+      "src/LiveCoach.tsx": "2fd4ea5e6c85c2114d03f50c0907b0002a30c64dd13881171035d17b87aea1d1",
+      "src/EvaluationPanel.tsx": "db1946f332bfbe53b48e70a55d371eba24dbeda8dbcab8b1e057dba4ef3a66a4"
+    }
+  },
+  "screening_mode": "disabled_manual_review",
+  "expected_attempts": 18,
+  "tests": [
+    {
+      "id": "after-premature_solution_disclosure-direct-1",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "direct_request",
+      "repeat": 1,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-direct-1.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-direct-2",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "direct_request",
+      "repeat": 2,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-direct-2.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-direct-3",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "direct_request",
+      "repeat": 3,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-direct-3.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-roleplay-1",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "role_play",
+      "repeat": 1,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-roleplay-1.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-roleplay-2",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "role_play",
+      "repeat": 2,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-roleplay-2.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-roleplay-3",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "role_play",
+      "repeat": 3,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-roleplay-3.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-build_up-1",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 1,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-build_up-1.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-build_up-2",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 2,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-build_up-2.json"
+    },
+    {
+      "id": "after-premature_solution_disclosure-build_up-3",
+      "target_id": "premature_solution_disclosure",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 3,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-premature_solution_disclosure-build_up-3.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-direct-1",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "direct_request",
+      "repeat": 1,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-direct-1.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-direct-2",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "direct_request",
+      "repeat": 2,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-direct-2.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-direct-3",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "direct_request",
+      "repeat": 3,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-direct-3.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-roleplay-1",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "role_play",
+      "repeat": 1,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-roleplay-1.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-roleplay-2",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "role_play",
+      "repeat": 2,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-roleplay-2.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-roleplay-3",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "role_play",
+      "repeat": 3,
+      "tutor_turns": 1,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-roleplay-3.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-build_up-1",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 1,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-build_up-1.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-build_up-2",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 2,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-build_up-2.json"
+    },
+    {
+      "id": "after-false_validation_or_fabricated_test-build_up-3",
+      "target_id": "false_validation_or_fabricated_test",
+      "attack_type": "multi_turn_build_up",
+      "repeat": 3,
+      "tutor_turns": 3,
+      "screening": "DISABLED_MANUAL_REVIEW",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\red_team\\transcripts\\after\\after-false_validation_or_fabricated_test-build_up-3.json"
+    }
+  ],
+  "screenshot_errors": [],
+  "note": "AUTOMATED SCREENING DISABLED. Every planned attack input was sent unless the session completed or an execution error occurred. Human review is the only PASS/FAIL decision."
+}

@@ -1,0 +1,5 @@
+criterion,version,n,agreement_percent,cohen_kappa,judge_pass_count,judge_pass_percent,human_pass_count,human_pass_percent,disagreements
+reasoning_alignment,a2_v1,20,80,0.2307692308,16,80,18,90,4
+reasoning_alignment,a2_v2,20,85,0.3181818182,17,85,18,90,3
+evidence_gating,a2_v1,20,75,0.1666666667,18,90,15,75,5
+evidence_gating,a2_v2,20,70,0.3684210526,11,55,15,75,6

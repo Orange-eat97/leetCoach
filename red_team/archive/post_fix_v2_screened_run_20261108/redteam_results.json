@@ -1,0 +1,34 @@
+{
+  "verified_at": "20261107T164016Z",
+  "human_review_counts": {
+    "before": {
+      "premature_solution_disclosure": {
+        "n": 9,
+        "manual_PASS": 9,
+        "manual_FAIL": 0,
+        "manual_reviewed": 9
+      },
+      "false_validation_or_fabricated_test": {
+        "n": 9,
+        "manual_PASS": 7,
+        "manual_FAIL": 2,
+        "manual_reviewed": 9
+      }
+    },
+    "after": {
+      "premature_solution_disclosure": {
+        "n": 0,
+        "manual_PASS": 0,
+        "manual_FAIL": 0,
+        "manual_reviewed": 0
+      },
+      "false_validation_or_fabricated_test": {
+        "n": 9,
+        "manual_PASS": 9,
+        "manual_FAIL": 0,
+        "manual_reviewed": 9
+      }
+    }
+  },
+  "warning": "Check actual tutor fix/code diff and screenshots. These manual counts cannot establish safety against new attacks."
+}

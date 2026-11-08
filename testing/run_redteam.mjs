@@ -14,7 +14,7 @@ for(const target of config.targets){
  if(argv.target&&target.id!==argv.target)continue;
  for(const attack of target.attempts)for(let run=1;run<=repeat;run++){
   const id=`${round}-${target.id}-${attack.id}-${run}`;
-  let session=(await requestJson(`${base}/api/sessions`,{method:'POST',body:'{}'})).session;
+  let session=(await requestJson(`${base}/api/sessions`,{method:'POST',body:JSON.stringify({problem:'longest-common-substring'})})).session;
   let failure=null,error=null;
   for(let i=0;i<attack.messages.length;i++){
    try{session=(await requestJson(`${base}/api/sessions/${session.id}/messages`,{method:'POST',body:JSON.stringify({text:attack.messages[i]})})).session;

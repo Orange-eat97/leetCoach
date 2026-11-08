@@ -1,0 +1,485 @@
+{
+  "schema": "algocoach.knapsack-smoke.v1",
+  "timestamp": "2026-11-04T15:41:15.347Z",
+  "mode": "llm",
+  "rows": [
+    {
+      "turn": 1,
+      "expected": "gap",
+      "actual": "gap",
+      "source": "llm",
+      "good": true
+    },
+    {
+      "turn": 2,
+      "expected": "solution",
+      "actual": "solution",
+      "source": "llm",
+      "good": true
+    },
+    {
+      "turn": 3,
+      "expected": "abstraction",
+      "actual": "abstraction",
+      "source": "policy-template",
+      "good": true
+    },
+    {
+      "turn": 4,
+      "expected": "transfer",
+      "actual": "transfer",
+      "source": "policy-template",
+      "good": true
+    },
+    {
+      "turn": 5,
+      "expected": "complete",
+      "actual": "complete",
+      "source": "policy-template",
+      "good": true
+    }
+  ],
+  "legacyOk": true,
+  "session": {
+    "id": "0121e28d-2454-4e58-860e-6622b5facd8d",
+    "problem": "zero-one-knapsack",
+    "phase": "complete",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I sort items by value-to-weight ratio and select each one if it still fits the bag capacity.",
+        "rationale": "The learner describes a concrete operation of sorting items based on their value-to-weight ratio and selecting them based on capacity, which indicates an understanding of the selection process.",
+        "turn": 1,
+        "source": "I sort items by value-to-weight ratio and select each one if it still fits the bag capacity.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "Greedy ratio fails: it chooses A and B worth 160, but B and C worth 220 is better.",
+        "rationale": "The learner correctly identifies a flaw in the greedy approach by demonstrating that it can lead to a suboptimal solution, as it overlooks the combination of items B and C which provides a higher total value.",
+        "turn": 2,
+        "source": "Greedy ratio fails: it chooses A and B worth 160, but B and C worth 220 is better. Greedy makes locally optimal picks but misses other feasible combinations.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "I use dp[i][w] as the maximum value from the first i items within capacity w.",
+        "rationale": "The learner correctly describes a dynamic programming approach to solve the 0/1 knapsack problem, detailing how to track the maximum value based on item inclusion and exclusion.",
+        "turn": 3,
+        "source": "I use dp[i][w] as the maximum value from the first i items within capacity w. For each item I compare skip dp[i-1][w] with take v_i+dp[i-1][w-weight_i] if it fits; using previous row means each item is used once. Take the maximum.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "The reusable principle is to model each item as an include-or-skip decision, with a state tracking processed items and remaining capacity.",
+        "rationale": "The learner extracts the structural principle of include/skip decisions, explaining how it prevents item reuse and captures all choices.",
+        "turn": 4,
+        "source": "The reusable principle is to model each item as an include-or-skip decision, with a state tracking processed items and remaining capacity. This prevents reusing an item and represents all viable choices.",
+        "status": "accepted"
+      },
+      {
+        "kind": "transfer_applied",
+        "supported": true,
+        "quote": "total sum must be even and target is half the total sum",
+        "rationale": "The learner correctly applies the include/skip principle to the equal partition problem, explaining how to determine if the target is reachable by partitioning the total sum.",
+        "turn": 5,
+        "source": "For equal subset partition, total sum must be even and target is half the total sum. Use a boolean reachable state for the first i numbers and target sum, with include or skip transitions using each number at most once; check if the target can be reached.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I sort items by value-to-weight ratio and select each one if it still fits the bag capacity.",
+      "activeGap": null,
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 4,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 5,
+          "phase": "transfer",
+          "action": "COMPLETE",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I sort items by value-to-weight ratio and select each one if it still fits the bag capacity."
+      },
+      {
+        "role": "coach",
+        "text": "While sorting by value-to-weight ratio is a common greedy approach, it may not yield the optimal solution for the 0/1 knapsack problem. Can you think of a scenario where selecting items based solely on this ratio might lead to a suboptimal choice?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "Greedy ratio fails: it chooses A and B worth 160, but B and C worth 220 is better. Greedy makes locally optimal picks but misses other feasible combinations."
+      },
+      {
+        "role": "coach",
+        "text": "You've identified that the greedy approach can lead to suboptimal choices. How would you apply the include/skip reasoning to systematically explore combinations of items A, B, and C to ensure you find the optimal solution?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I use dp[i][w] as the maximum value from the first i items within capacity w. For each item I compare skip dp[i-1][w] with take v_i+dp[i-1][w-weight_i] if it fits; using previous row means each item is used once. Take the maximum."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle is to model each item as an include-or-skip decision, with a state tracking processed items and remaining capacity. This prevents reusing an item and represents all viable choices."
+      },
+      {
+        "role": "coach",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "For equal subset partition, total sum must be even and target is half the total sum. Use a boolean reachable state for the first i numbers and target sum, with include or skip transitions using each number at most once; check if the target can be reached."
+      },
+      {
+        "role": "coach",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "action": "COMPLETE",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:40:49.386Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3516,
+        "httpStatus": 200,
+        "requestId": "req_ebb616e70ddb46cbae2da8afa8ce565f",
+        "outcome": "success",
+        "responseChars": 1711,
+        "promptTokens": 795,
+        "completionTokens": 354,
+        "durationMs": 6510
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I sort items by value-to-weight ratio and select each one if it still fits the bag capacity."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:40:55.903Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 2412,
+        "httpStatus": 200,
+        "requestId": "req_66de7e8aff4b4d3c8ddd01ef07cc4109",
+        "outcome": "success",
+        "responseChars": 272,
+        "promptTokens": 570,
+        "completionTokens": 60,
+        "durationMs": 1722
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "While sorting by value-to-weight ratio is a common greedy approach, it may not yield the optimal solution for the 0/1 knapsack problem. Can you think of a scenario where selecting items based solely on this ratio might lead to a suboptimal choice?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:40:57.635Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4067,
+        "httpStatus": 200,
+        "requestId": "req_3ac2f286885c41dda004dac1d749ad84",
+        "outcome": "success",
+        "responseChars": 803,
+        "promptTokens": 918,
+        "completionTokens": 171,
+        "durationMs": 2666
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "Greedy ratio fails: it chooses A and B worth 160, but B and C worth 220 is better."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:41:00.303Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 3040,
+        "httpStatus": 200,
+        "requestId": "req_36ca49a850334f049aba1e225bf10567",
+        "outcome": "success",
+        "responseChars": 247,
+        "promptTokens": 723,
+        "completionTokens": 50,
+        "durationMs": 2060
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "You've identified that the greedy approach can lead to suboptimal choices. How would you apply the include/skip reasoning to systematically explore combinations of items A, B, and C to ensure you find the optimal solution?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:41:02.373Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 4670,
+        "httpStatus": 200,
+        "requestId": "req_5bb65ddea45a45398e046c55ff8ec11d",
+        "outcome": "success",
+        "responseChars": 1037,
+        "promptTokens": 1065,
+        "completionTokens": 234,
+        "durationMs": 3794
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "I use dp[i][w] as the maximum value from the first i items within capacity w."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:41:06.171Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 5182,
+        "httpStatus": 200,
+        "requestId": "req_e65e0aeb0fdc44c1bc7d546d13936a72",
+        "outcome": "success",
+        "responseChars": 1647,
+        "promptTokens": 1166,
+        "completionTokens": 347,
+        "durationMs": 4847
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "The reusable principle is to model each item as an include-or-skip decision, with a state tracking processed items and remaining capacity."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "ASK_TRANSFER",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:41:11.025Z",
+        "turn": 5,
+        "timeoutMs": 25000,
+        "inputChars": 5825,
+        "httpStatus": 200,
+        "requestId": "req_1af4544510714dfc99820cc26af4d1bb",
+        "outcome": "success",
+        "responseChars": 1360,
+        "promptTokens": 1307,
+        "completionTokens": 280,
+        "durationMs": 4309
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "transfer_applied",
+            "quote": "total sum must be even and target is half the total sum"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "transfer",
+        "to": "complete",
+        "action": "COMPLETE",
+        "reason": "Latest learner message supports required checkpoint: transfer_applied",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "COMPLETE",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 5,
+    "complete": true
+  }
+}

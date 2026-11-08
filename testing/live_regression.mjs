@@ -43,7 +43,7 @@ for(let repeat=1;repeat<=repeats;repeat++){
   for(const fixture of fixtures){
     let session=null,sessionId=null, rows=[],fault=null;
     try{
-      const created=await request('/api/sessions','POST',{});
+      const created=await request('/api/sessions','POST',{problem:'longest-common-substring'});
       sessionId=created.session.id;session=created.session;
       for(let i=0;i<fixture.data.learner_turns.length;i++){
         if(session.complete){fault=`Completed prematurely at turn ${i}`;break;}
@@ -81,7 +81,7 @@ for(const [name,text] of [
 ]){
   let error=null,session=null;
   try{
-    const created=await request('/api/sessions','POST',{});
+    const created=await request('/api/sessions','POST',{problem:'longest-common-substring'});
     const result=await request(`/api/sessions/${created.session.id}/messages`,'POST',{text});
     session=result.session;
     if(result.session.phase!=='approach')error=`Invalid advancement to ${result.session.phase}`;

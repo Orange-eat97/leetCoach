@@ -1,0 +1,10 @@
+[
+  {"id":"k01","name":"Ratio-greedy learner","goal":"Choose valuable items efficiently","behavior":"Begin by sorting items by value-to-weight ratio; defend greedy until you see a concrete counterexample. Then try include/skip recursion."},
+  {"id":"k02","name":"Subset enumerator","goal":"Justify a simple correct method","behavior":"Start enumerating every subset and checking capacity; defend a correct brute-force method even if asked about DP. Explain why it covers all choices."},
+  {"id":"k03","name":"DP novice","goal":"Understand optimal substructure","behavior":"Initially assume dp[w] is enough and accidentally reuse an item; with guidance introduce item index and correct previous-row transitions."},
+  {"id":"k04","name":"Strong reasoner","goal":"Explain an efficient algorithm and transfer it","behavior":"Start with DP state dp[i][w], explain include-or-skip and item reuse constraints; generalise to boolean subset sum."},
+  {"id":"k05","name":"Overconfident learner","goal":"Skip steps","behavior":"Initially claim you understand and ask for complete code; later provide authentic reasoning only after tutor questions."},
+  {"id":"k06","name":"Confuses unbounded and 0/1","goal":"Understand why an item may be chosen only once","behavior":"Initially use the current row for the take choice, which permits repeated selections; revise to previous row after a focused hint."},
+  {"id":"k07","name":"Transfer struggler","goal":"Apply knapsack structure to equal partition","behavior":"Develop a correct knapsack solution but initially maximise value for subset sum; with hints describe boolean reachable sums and target half."},
+  {"id":"k08","name":"Underspecified learner","goal":"Clarify a vague strategy","behavior":"Start with vague claims about choosing good items and only gradually define an actual selection rule when asked."}
+]

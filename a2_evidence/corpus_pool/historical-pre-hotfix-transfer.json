@@ -1,0 +1,497 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "historical-pre-hotfix-transfer",
+  "source_version": "pre_hotfix_20261104",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Human-authored test messages in a genuinely model-backed AlgoCoach session; provided in prior project testing.",
+  "persona": {
+    "id": "manual-historical",
+    "name": "Human-operated exploratory regression",
+    "goal": "Exercise the staged learning interaction",
+    "behavior": "Submitted reasoning statements to a live model-backed tutor in a five-turn evaluation."
+  },
+  "expected_failure_candidate": true,
+  "generated_at": null,
+  "generator": "Human-authored learner turns; tutor replies from live model (verified in coach_reply.source)",
+  "complete": false,
+  "reached_transfer": true,
+  "error": null,
+  "session": {
+    "id": "b14a9451-853d-498b-bf46-382225a21cd5",
+    "problem": "longest-common-substring",
+    "phase": "transfer",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring.",
+        "rationale": "The learner describes an executable approach using two pointers to track matching characters, which is a valid strategy for finding a longest common substring.",
+        "turn": 1,
+        "source": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring. Otherwise, I reset the count and move both pointers forward.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "It could miss a common substring starting at different offsets, such as BABC in the example.",
+        "rationale": "The learner identifies a real failure mode of their approach, acknowledging that it does not account for substrings that may start at different positions in the two strings.",
+        "turn": 2,
+        "source": "My method only examines positions where both pointers have advanced equally. It could miss a common substring starting at different offsets, such as BABC in the example.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2.",
+        "rationale": "The learner describes a dynamic programming approach that correctly identifies the length of common substrings by utilizing a 2D table, ensuring that all offsets are considered and contiguity is preserved.",
+        "turn": 3,
+        "source": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2. When they match, use dp[i-1][j-1]+1; otherwise reset to zero. Track the maximum.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "The reusable principle is to represent a problem using states defined by the endpoints of two sequences.",
+        "rationale": "The learner describes a reusable principle that outlines how to approach the problem by defining states based on the endpoints of the sequences, which is crucial for solving the longest common substring problem.",
+        "turn": 4,
+        "source": "The reusable principle is to represent a problem using states defined by the endpoints of two sequences. Matching elements extend a contiguous run; mismatches break it. Considering every pair of endpoints avoids missing shifted alignments.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring.",
+      "activeGap": "near_transfer",
+      "repairFocus": null,
+      "attemptsWithoutProgress": 1,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 4,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 5,
+          "phase": "transfer",
+          "action": "HINT",
+          "outcome": "no_advance"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, describe the algorithm you would try for the longest common substring of ABABC and BABCA. What do the pointers or states represent?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring. Otherwise, I reset the count and move both pointers forward."
+      },
+      {
+        "role": "coach",
+        "text": "How would you handle cases where the characters do not match while using your two-pointer approach?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "My method only examines positions where both pointers have advanced equally. It could miss a common substring starting at different offsets, such as BABC in the example."
+      },
+      {
+        "role": "coach",
+        "text": "What adjustments could you make to your two-pointer method to ensure it captures common substrings that start at different offsets in the two strings?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2. When they match, use dp[i-1][j-1]+1; otherwise reset to zero. Track the maximum."
+      },
+      {
+        "role": "coach",
+        "text": "How would you adapt your 2D table approach to handle the integer arrays [1,2,3,2,1] and [3,2,1,4,7] for finding the longest shared contiguous run?",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle is to represent a problem using states defined by the endpoints of two sequences. Matching elements extend a contiguous run; mismatches break it. Considering every pair of endpoints avoids missing shifted alignments."
+      },
+      {
+        "role": "coach",
+        "text": "How would you specifically implement the idea of using states defined by the endpoints of two sequences to find the longest shared contiguous run in the integer arrays [1,2,3,2,1] and [3,2,1,4,7]?",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "For two integer arrays, I can use the same dp[i][j] as the length of the common contiguous subarray ending at those indices. Equal integers extend the diagonal by one, unequal integers reset it to zero. I track the largest value."
+      },
+      {
+        "role": "coach",
+        "text": "What specific adjustments would you make to your approach if the integer arrays contained negative numbers or zeros, and how would that affect your dp table calculations?",
+        "action": "HINT",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:07.448Z",
+        "durationMs": 3731,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 2633,
+        "httpStatus": 200,
+        "requestId": "req_2081bf5d109040c9bf31904ca82e7a75",
+        "responseChars": 626,
+        "promptTokens": 533,
+        "completionTokens": 126,
+        "turn": 1
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:11.184Z",
+        "durationMs": 1587,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 2773,
+        "httpStatus": 200,
+        "requestId": "req_dfe9899032bb47709fe110f761019bf7",
+        "responseChars": 124,
+        "promptTokens": 608,
+        "completionTokens": 26,
+        "turn": 1
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "How would you handle cases where the characters do not match while using your two-pointer approach?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:24.354Z",
+        "durationMs": 2915,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3069,
+        "httpStatus": 200,
+        "requestId": "req_5ed08284cc6444aab8b33aad043d21e4",
+        "responseChars": 542,
+        "promptTokens": 623,
+        "completionTokens": 110,
+        "turn": 2
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "It could miss a common substring starting at different offsets, such as BABC in the example."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:27.270Z",
+        "durationMs": 1333,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3107,
+        "httpStatus": 200,
+        "requestId": "req_91cc8c77530a43ab89f7e37a5d4b6648",
+        "responseChars": 175,
+        "promptTokens": 666,
+        "completionTokens": 35,
+        "turn": 2
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "What adjustments could you make to your two-pointer method to ensure it captures common substrings that start at different offsets in the two strings?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:31.460Z",
+        "durationMs": 2831,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3589,
+        "httpStatus": 200,
+        "requestId": "req_e7c0f46b783c4d3f832901277f81f7af",
+        "responseChars": 1038,
+        "promptTokens": 748,
+        "completionTokens": 218,
+        "turn": 3
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:34.292Z",
+        "durationMs": 1019,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3720,
+        "httpStatus": 200,
+        "requestId": "req_5e0b6509c5e943658f6f4c4e262cc6f4",
+        "responseChars": 171,
+        "promptTokens": 868,
+        "completionTokens": 54,
+        "turn": 3
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "ASK_ABSTRACTION",
+        "text": "How would you adapt your 2D table approach to handle the integer arrays [1,2,3,2,1] and [3,2,1,4,7] for finding the longest shared contiguous run?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:39.276Z",
+        "durationMs": 4098,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4163,
+        "httpStatus": 200,
+        "requestId": "req_08320dad39a846e2a0f8fa6f1ae0dff1",
+        "responseChars": 1152,
+        "promptTokens": 886,
+        "completionTokens": 237,
+        "turn": 4
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "The reusable principle is to represent a problem using states defined by the endpoints of two sequences."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:43.375Z",
+        "durationMs": 1110,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4161,
+        "httpStatus": 200,
+        "requestId": "req_db3fc640140142d997c62948eec6ea08",
+        "responseChars": 221,
+        "promptTokens": 894,
+        "completionTokens": 59,
+        "turn": 4
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "ASK_TRANSFER",
+        "text": "How would you specifically implement the idea of using states defined by the endpoints of two sequences to find the longest shared contiguous run in the integer arrays [1,2,3,2,1] and [3,2,1,4,7]?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:00:51.647Z",
+        "durationMs": 8707,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4749,
+        "httpStatus": 200,
+        "requestId": "req_6aa9317bdaf04c0796fd9c8d192a69c6",
+        "responseChars": 1004,
+        "promptTokens": 1022,
+        "completionTokens": 222,
+        "turn": 5
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "request_answer",
+        "status": "progressing",
+        "ambiguous": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "transfer",
+        "to": "transfer",
+        "action": "HINT",
+        "reason": "Answer request does not bypass evidence gates",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:01:00.355Z",
+        "durationMs": 1062,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3897,
+        "httpStatus": 200,
+        "requestId": "req_905ce2a8013a44fa81085c45d0281238",
+        "responseChars": 195,
+        "promptTokens": 886,
+        "completionTokens": 37,
+        "turn": 5
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "HINT",
+        "text": "What specific adjustments would you make to your approach if the integer arrays contained negative numbers or zeros, and how would that affect your dp table calculations?",
+        "visual": null,
+        "source": "llm"
+      }
+    ],
+    "turn": 5,
+    "complete": false
+  }
+}

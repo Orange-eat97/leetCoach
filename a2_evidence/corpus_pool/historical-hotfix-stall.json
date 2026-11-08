@@ -1,0 +1,460 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "historical-hotfix-stall",
+  "source_version": "hotfix_20261104",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Human-authored test messages in a genuinely model-backed AlgoCoach session; provided in prior project testing.",
+  "persona": {
+    "id": "manual-historical",
+    "name": "Human-operated exploratory regression",
+    "goal": "Exercise the staged learning interaction",
+    "behavior": "Submitted reasoning statements to a live model-backed tutor in a five-turn evaluation."
+  },
+  "expected_failure_candidate": true,
+  "generated_at": null,
+  "generator": "Human-authored learner turns; tutor replies from live model (verified in coach_reply.source)",
+  "complete": false,
+  "reached_transfer": false,
+  "error": null,
+  "session": {
+    "id": "11819d93-20a8-47e8-a0cf-c2cf117c509a",
+    "problem": "longest-common-substring",
+    "phase": "gap",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2.",
+        "rationale": "The learner describes an executable approach using a 2D table to track the lengths of common substrings, which is a valid strategy for solving the problem.",
+        "turn": 3,
+        "source": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2. When they match, use dp[i-1][j-1]+1; otherwise reset to zero. Track the maximum.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2.",
+      "activeGap": "alignment_coverage",
+      "repairFocus": null,
+      "attemptsWithoutProgress": 2,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CLARIFY",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 2,
+          "phase": "approach",
+          "action": "CLARIFY",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 3,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 4,
+          "phase": "gap",
+          "action": "CHALLENGE",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 5,
+          "phase": "gap",
+          "action": "HINT",
+          "outcome": "no_advance"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, describe the algorithm you would try for the longest common substring of ABABC and BABCA. What do the pointers or states represent?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I would use two pointers, one at the start of each string. If the characters match, I extend the current substring. Otherwise, I reset the count and move both pointers forward."
+      },
+      {
+        "role": "coach",
+        "text": "Can you clarify how you would handle the situation when the characters do not match? Specifically, what would you do with the pointers in that case?",
+        "action": "CLARIFY",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "My method only examines positions where both pointers have advanced equally. It could miss a common substring starting at different offsets, such as BABC in the example."
+      },
+      {
+        "role": "coach",
+        "text": "How would you adjust your approach to ensure that you consider substrings starting at different offsets in both strings when the characters do not match?",
+        "action": "CLARIFY",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2. When they match, use dp[i-1][j-1]+1; otherwise reset to zero. Track the maximum."
+      },
+      {
+        "role": "coach",
+        "text": "Your approach using a 2D table is solid, but how would you ensure that you correctly initialize the table and handle the boundaries when accessing dp[i-1][j-1]?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle is to represent a problem using states defined by the endpoints of two sequences. Matching elements extend a contiguous run; mismatches break it. Considering every pair of endpoints avoids missing shifted alignments."
+      },
+      {
+        "role": "coach",
+        "text": "Your explanation of using states defined by endpoints is insightful, but how would you specifically initialize the 2D table and handle the boundaries to avoid accessing out-of-bounds indices when calculating dp[i][j]?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "For two integer arrays, I can use the same dp[i][j] as the length of the common contiguous subarray ending at those indices. Equal integers extend the diagonal by one, unequal integers reset it to zero. I track the largest value."
+      },
+      {
+        "role": "coach",
+        "text": "Your understanding of using dp[i][j] to track the length of common contiguous subarrays is correct. How would you initialize the first row and first column of the dp table to handle the boundaries properly?",
+        "action": "HINT",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:38.331Z",
+        "durationMs": 3031,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3514,
+        "httpStatus": 200,
+        "requestId": "req_be1f247a997548d2b31c1b575a9ea0d7",
+        "responseChars": 726,
+        "promptTokens": 709,
+        "completionTokens": 143,
+        "turn": 1
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "approach",
+        "action": "CLARIFY",
+        "reason": "No new grounded approach_explained evidence on this turn",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:41.371Z",
+        "durationMs": 1350,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 2371,
+        "httpStatus": 200,
+        "requestId": "req_1fc4fc0cdc534657a74e6e9de47deaec",
+        "responseChars": 173,
+        "promptTokens": 530,
+        "completionTokens": 37,
+        "turn": 1
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CLARIFY",
+        "text": "Can you clarify how you would handle the situation when the characters do not match? Specifically, what would you do with the pointers in that case?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:44.809Z",
+        "durationMs": 2241,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3849,
+        "httpStatus": 200,
+        "requestId": "req_1cd9fa8b9c6245548ba812dd92fb9bf7",
+        "responseChars": 593,
+        "promptTokens": 774,
+        "completionTokens": 117,
+        "turn": 2
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "approach",
+        "to": "approach",
+        "action": "CLARIFY",
+        "reason": "No new grounded approach_explained evidence on this turn",
+        "attemptsWithoutProgress": 2
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:47.053Z",
+        "durationMs": 943,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 2771,
+        "httpStatus": 200,
+        "requestId": "req_72a8b88abc6c46c08ba78fbc1764b278",
+        "responseChars": 178,
+        "promptTokens": 611,
+        "completionTokens": 35,
+        "turn": 2
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "CLARIFY",
+        "text": "How would you adjust your approach to ensure that you consider substrings starting at different offsets in both strings when the characters do not match?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:50.049Z",
+        "durationMs": 2439,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4232,
+        "httpStatus": 200,
+        "requestId": "req_8c66a85a3c054eb89d6a5f582dca55e5",
+        "responseChars": 610,
+        "promptTokens": 869,
+        "completionTokens": 141,
+        "turn": 3
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I could use a 2D table. dp[i][j] is the length of the common substring ending at the i-th character of s1 and j-th character of s2."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:52.488Z",
+        "durationMs": 1117,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3894,
+        "httpStatus": 200,
+        "requestId": "req_f3afe692ff0f4a599a993e31478c6eb0",
+        "responseChars": 185,
+        "promptTokens": 917,
+        "completionTokens": 45,
+        "turn": 3
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "CHALLENGE",
+        "text": "Your approach using a 2D table is solid, but how would you ensure that you correctly initialize the table and handle the boundaries when accessing dp[i-1][j-1]?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:55.903Z",
+        "durationMs": 2663,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4815,
+        "httpStatus": 200,
+        "requestId": "req_a0efdfd8a333409c8befc997047df845",
+        "responseChars": 729,
+        "promptTokens": 1002,
+        "completionTokens": 140,
+        "turn": 4
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "gap",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "No new grounded limitation_explained evidence on this turn",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:28:58.569Z",
+        "durationMs": 1075,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 3711,
+        "httpStatus": 200,
+        "requestId": "req_78250875d3ac449ca58140805c77b019",
+        "responseChars": 242,
+        "promptTokens": 818,
+        "completionTokens": 49,
+        "turn": 4
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "CHALLENGE",
+        "text": "Your explanation of using states defined by endpoints is insightful, but how would you specifically initialize the 2D table and handle the boundaries to avoid accessing out-of-bounds indices when calculating dp[i][j]?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:29:03.239Z",
+        "durationMs": 2404,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 5279,
+        "httpStatus": 200,
+        "requestId": "req_3b2d9c6a11e344f1b89e55e3ba991d7e",
+        "responseChars": 691,
+        "promptTokens": 1099,
+        "completionTokens": 136,
+        "turn": 5
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "gap",
+        "to": "gap",
+        "action": "HINT",
+        "reason": "No new grounded limitation_explained evidence on this turn",
+        "attemptsWithoutProgress": 2
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T12:29:05.643Z",
+        "durationMs": 1421,
+        "timeoutMs": 25000,
+        "outcome": "success",
+        "inputChars": 4152,
+        "httpStatus": 200,
+        "requestId": "req_581b14aa1254410f87f5c1415a99b70d",
+        "responseChars": 217,
+        "promptTokens": 921,
+        "completionTokens": 45,
+        "turn": 5
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "HINT",
+        "text": "Your understanding of using dp[i][j] to track the length of common contiguous subarrays is correct. How would you initialize the first row and first column of the dp table to handle the boundaries properly?",
+        "visual": null,
+        "source": "llm"
+      }
+    ],
+    "turn": 5,
+    "complete": false
+  }
+}

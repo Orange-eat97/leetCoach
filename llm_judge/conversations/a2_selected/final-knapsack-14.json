@@ -1,0 +1,463 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "final-knapsack-14",
+  "source_version": "final-knapsack",
+  "problem": "zero-one-knapsack",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Initially use the current row for the take choice, which permits repeated selections; revise to previous row after a focused hint.",
+  "persona": {
+    "id": "k06",
+    "name": "Confuses unbounded and 0/1",
+    "goal": "Understand why an item may be chosen only once",
+    "behavior": "Initially use the current row for the take choice, which permits repeated selections; revise to previous row after a focused hint."
+  },
+  "generated_at": "2026-11-07T06:26:11.778Z",
+  "expected_failure_candidate": false,
+  "complete": true,
+  "reached_transfer": true,
+  "generator": "LLM simulated learner (tutor turns directly from running server)",
+  "error": null,
+  "session": {
+    "id": "c07d910d-f13e-4119-a24e-5caf0a41f0ca",
+    "problem": "zero-one-knapsack",
+    "phase": "complete",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I'd probably consider taking the item with the highest value-to-weight ratio first",
+        "rationale": "The learner describes a concrete selection operation by considering the value-to-weight ratio, which is a step in their approach to solving the knapsack problem.",
+        "turn": 1,
+        "source": "To choose items for a capacity-50 0/1 knapsack, I would start by looking at the items and their weights and values. I'd probably consider taking the item with the highest value-to-weight ratio first, which might be item B (20, 100) since it has a good value. If I take item B, I have room for 30 more weight, so I would then consider taking item C next. However, I'm not sure if I can take item A again because I thought I could keep selecting items freely, but maybe I should only choose each item once. So, I think I would end up taking items B and C.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "I guess I just needed to realize that I can't take item A again, so I can only choose it once.",
+        "rationale": "The learner acknowledges the limitation of their initial approach regarding the selection of items, recognizing that each item can only be chosen once.",
+        "turn": 2,
+        "source": "After taking item B, I have 30 weight left. I can choose either item A or item C. Item A weighs 10 and has a value of 60, while item C weighs 30 and has a value of 120. If I take item C, I use up my remaining capacity and get a total value of 100 (from B and C). If I take item A instead, I'd have a total value of 160 (60 from A and 100 from B), which is better. So I think I should choose item A. I guess I just needed to realize that I can't take item A again, so I can only choose it once.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "I can create a table or use a recursive approach to explore both possibilities for each item",
+        "rationale": "The learner correctly identifies the use of a recursive approach or dynamic programming to explore all combinations of items while adhering to the capacity constraint.",
+        "turn": 3,
+        "source": "To ensure that my selection process considers all possible combinations while adhering to the 0/1 constraint, I would systematically evaluate each item based on whether I choose to include it or not. For each item, I would check if I can add it without exceeding the capacity, and then I would compare the total values for the combinations. I can create a table or use a recursive approach to explore both possibilities for each item—taking it or skipping it—while keeping track of the total weight and value. This way, I can make sure I'm not exceeding the capacity and that I'm only selecting each item once.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "The reusable principle in my item-selection algorithm is the take-or-skip decision for each item.",
+        "rationale": "The learner correctly identifies the take-or-skip decision as a reusable principle that underlies their algorithm, explaining how it allows for exploration of all combinations while adhering to the capacity constraint.",
+        "turn": 4,
+        "source": "The reusable principle in my item-selection algorithm is the take-or-skip decision for each item. For every item, I decide whether to take it, which adds its value to the total and subtracts its weight from the remaining capacity, or to skip it, which keeps the total value and capacity unchanged. This decision-making process ensures that I explore all combinations while respecting the capacity constraint, as I only include items that fit within the remaining weight limit. By systematically making these choices for each item, I can find the optimal combination without exceeding the capacity and while ensuring that no item is counted more than once.",
+        "status": "accepted"
+      },
+      {
+        "kind": "transfer_applied",
+        "supported": true,
+        "quote": "The include/skip idea transfers here because I can decide to either include a number in my subset or skip it",
+        "rationale": "The learner effectively applies the include/skip principle from the knapsack problem to the subset-sum problem, demonstrating a clear understanding of how the concepts relate.",
+        "turn": 5,
+        "source": "To see if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I first calculate the total sum, which is 22. So, I need to check if I can find a subset that sums up to 11. The include/skip idea transfers here because I can decide to either include a number in my subset or skip it, just like in the knapsack problem. My state would represent the current total I've built up as I try to reach 11, and I'd also keep track of the remaining numbers yet to be considered. To ensure each number is used at most once, I would only include each number once in each decision, similar to how I handle items in the knapsack. I would explore combinations like including the first 5 and then checking if I can reach 11 with the remaining numbers.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I'd probably consider taking the item with the highest value-to-weight ratio first",
+      "activeGap": null,
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 4,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 5,
+          "phase": "transfer",
+          "action": "COMPLETE",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To choose items for a capacity-50 0/1 knapsack, I would start by looking at the items and their weights and values. I'd probably consider taking the item with the highest value-to-weight ratio first, which might be item B (20, 100) since it has a good value. If I take item B, I have room for 30 more weight, so I would then consider taking item C next. However, I'm not sure if I can take item A again because I thought I could keep selecting items freely, but maybe I should only choose each item once. So, I think I would end up taking items B and C."
+      },
+      {
+        "role": "coach",
+        "text": "Your reasoning about selecting items based on the value-to-weight ratio is a common approach, but remember that in a 0/1 knapsack, you cannot take an item more than once. If you take item B, you have 30 weight left, which allows you to consider item C, but you should also evaluate if including item A might yield a higher total value. How would you decide between including item A or C given the remaining capacity after selecting item B?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "After taking item B, I have 30 weight left. I can choose either item A or item C. Item A weighs 10 and has a value of 60, while item C weighs 30 and has a value of 120. If I take item C, I use up my remaining capacity and get a total value of 100 (from B and C). If I take item A instead, I'd have a total value of 160 (60 from A and 100 from B), which is better. So I think I should choose item A. I guess I just needed to realize that I can't take item A again, so I can only choose it once."
+      },
+      {
+        "role": "coach",
+        "text": "Your reasoning about choosing between item A and item C after selecting item B is sound. How do you ensure that your selection process considers all possible combinations of items without exceeding the capacity, while also adhering to the 0/1 constraint?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To ensure that my selection process considers all possible combinations while adhering to the 0/1 constraint, I would systematically evaluate each item based on whether I choose to include it or not. For each item, I would check if I can add it without exceeding the capacity, and then I would compare the total values for the combinations. I can create a table or use a recursive approach to explore both possibilities for each item—taking it or skipping it—while keeping track of the total weight and value. This way, I can make sure I'm not exceeding the capacity and that I'm only selecting each item once."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle in my item-selection algorithm is the take-or-skip decision for each item. For every item, I decide whether to take it, which adds its value to the total and subtracts its weight from the remaining capacity, or to skip it, which keeps the total value and capacity unchanged. This decision-making process ensures that I explore all combinations while respecting the capacity constraint, as I only include items that fit within the remaining weight limit. By systematically making these choices for each item, I can find the optimal combination without exceeding the capacity and while ensuring that no item is counted more than once."
+      },
+      {
+        "role": "coach",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To see if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I first calculate the total sum, which is 22. So, I need to check if I can find a subset that sums up to 11. The include/skip idea transfers here because I can decide to either include a number in my subset or skip it, just like in the knapsack problem. My state would represent the current total I've built up as I try to reach 11, and I'd also keep track of the remaining numbers yet to be considered. To ensure each number is used at most once, I would only include each number once in each decision, similar to how I handle items in the knapsack. I would explore combinations like including the first 5 and then checking if I can reach 11 with the remaining numbers."
+      },
+      {
+        "role": "coach",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "action": "COMPLETE",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:25.401Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3977,
+        "httpStatus": 200,
+        "requestId": "req_87221fcbb687454a9b1efa3ff9fd9e60",
+        "outcome": "success",
+        "responseChars": 1380,
+        "promptTokens": 908,
+        "completionTokens": 282,
+        "durationMs": 4723
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I'd probably consider taking the item with the highest value-to-weight ratio first"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:30.125Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3753,
+        "httpStatus": 200,
+        "requestId": "req_91f8941ce7af470d9010470404c81b1e",
+        "outcome": "success",
+        "responseChars": 464,
+        "promptTokens": 901,
+        "completionTokens": 102,
+        "durationMs": 2437
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "Your reasoning about selecting items based on the value-to-weight ratio is a common approach, but remember that in a 0/1 knapsack, you cannot take an item more than once. If you take item B, you have 30 weight left, which allows you to consider item C, but you should also evaluate if including item A might yield a higher total value. How would you decide between including item A or C given the remaining capacity after selecting item B?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:35.777Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 5046,
+        "httpStatus": 200,
+        "requestId": "req_78306d2554c9477583fd6052819cea50",
+        "outcome": "success",
+        "responseChars": 1751,
+        "promptTokens": 1168,
+        "completionTokens": 371,
+        "durationMs": 7057
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "I guess I just needed to realize that I can't take item A again, so I can only choose it once."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:42.835Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4656,
+        "httpStatus": 200,
+        "requestId": "req_5b35ee2e37e34ed29c2b792e36e54743",
+        "outcome": "success",
+        "responseChars": 279,
+        "promptTokens": 1163,
+        "completionTokens": 55,
+        "durationMs": 1725
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "Your reasoning about choosing between item A and item C after selecting item B is sound. How do you ensure that your selection process considers all possible combinations of items without exceeding the capacity, while also adhering to the 0/1 constraint?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:47.332Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 6073,
+        "httpStatus": 200,
+        "requestId": "req_5cbdf453bb7d48b18591514db140e530",
+        "outcome": "success",
+        "responseChars": 1088,
+        "promptTokens": 1374,
+        "completionTokens": 218,
+        "durationMs": 4347
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "I can create a table or use a recursive approach to explore both possibilities for each item"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:25:54.505Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 7052,
+        "httpStatus": 200,
+        "requestId": "req_e7a5fec629534324bafad92096673a32",
+        "outcome": "success",
+        "responseChars": 1697,
+        "promptTokens": 1556,
+        "completionTokens": 349,
+        "durationMs": 6337
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "The reusable principle in my item-selection algorithm is the take-or-skip decision for each item."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "ASK_TRANSFER",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:26:04.802Z",
+        "turn": 5,
+        "timeoutMs": 25000,
+        "inputChars": 8155,
+        "httpStatus": 200,
+        "requestId": "req_73fc4200fdf84061acfd0377c5e68630",
+        "outcome": "success",
+        "responseChars": 1618,
+        "promptTokens": 1815,
+        "completionTokens": 336,
+        "durationMs": 6973
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "transfer_applied",
+            "quote": "The include/skip idea transfers here because I can decide to either include a number in my subset or skip it"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "transfer",
+        "to": "complete",
+        "action": "COMPLETE",
+        "reason": "Latest learner message supports required checkpoint: transfer_applied",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "COMPLETE",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 5,
+    "complete": true
+  }
+}

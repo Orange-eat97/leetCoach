@@ -1,0 +1,621 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "final-knapsack-18",
+  "source_version": "final-knapsack",
+  "problem": "zero-one-knapsack",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Start enumerating every subset and checking capacity; defend a correct brute-force method even if asked about DP. Explain why it covers all choices.",
+  "persona": {
+    "id": "k02",
+    "name": "Subset enumerator",
+    "goal": "Justify a simple correct method",
+    "behavior": "Start enumerating every subset and checking capacity; defend a correct brute-force method even if asked about DP. Explain why it covers all choices."
+  },
+  "generated_at": "2026-11-07T06:44:51.975Z",
+  "expected_failure_candidate": false,
+  "complete": true,
+  "reached_transfer": true,
+  "generator": "LLM simulated learner (tutor turns directly from running server)",
+  "error": null,
+  "session": {
+    "id": "5e1574d5-0590-4f14-9d46-d24c80791a26",
+    "problem": "zero-one-knapsack",
+    "phase": "complete",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "enumerating all possible subsets of the items A, B, and C",
+        "rationale": "The learner describes a concrete selection operation by detailing the enumeration of all subsets, which is a valid approach for solving the knapsack problem.",
+        "turn": 1,
+        "source": "To choose items for a capacity-50 knapsack, I would start by enumerating all possible subsets of the items A, B, and C. For each subset, I would calculate the total weight and value. The steps would be:\n1. List all subsets: {}, {A}, {B}, {C}, {A,B}, {A,C}, {B,C}, {A,B,C}.\n2. For each subset, compute the total weight and total value.\n3. Check if the total weight is less than or equal to 50. If it is, compare the total value to find the maximum.\n\nThis brute-force method covers all choices because I consider every possible combination of items, ensuring that I don't miss any potential optimal solution.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "brute-force would indeed become inefficient because the number of subsets grows exponentially",
+        "rationale": "The learner recognizes a limitation of their brute-force approach, acknowledging that it becomes impractical with larger inputs due to exponential growth in subsets.",
+        "turn": 2,
+        "source": "If I had more items or larger capacities, brute-force would indeed become inefficient because the number of subsets grows exponentially. In that case, I would still start by listing all subsets, but I might prioritize which subsets to check based on their weights and values. For example, I could eliminate any subset that exceeds the capacity early on. However, I still believe that checking every subset guarantees that I find the optimal solution, even if it takes longer.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "include it and calculate the new total value",
+        "rationale": "The learner outlines a correct method for the 0/1 knapsack problem by explaining how to include an item if it fits within the capacity and how to calculate the new total value.",
+        "turn": 5,
+        "source": "To decide whether to include item A or skip it in the 0/1 knapsack problem, I would first check the current total weight of the subset being evaluated. If including item A keeps the total weight within the capacity of 50, I would include it and calculate the new total value. If it exceeds the capacity, I would skip item A and evaluate the next item. This process ensures that I only consider valid combinations that do not exceed the weight limit.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "checking all possible combinations of items while respecting the capacity constraint",
+        "rationale": "The learner identifies the principle of evaluating all combinations while adhering to the capacity limit, which is crucial for ensuring valid selections in the knapsack problem.",
+        "turn": 6,
+        "source": "The reusable principle that makes my item-selection algorithm correct is the idea of checking all possible combinations of items while respecting the capacity constraint. Each decision to include or skip an item is based on whether the current total weight, when combined with the weight of the item, would exceed the capacity of 50. This ensures that I only evaluate valid subsets that fit within the limit. By considering every possible combination, I can guarantee that I will find the optimal solution that maximizes value without exceeding capacity.",
+        "status": "accepted"
+      },
+      {
+        "kind": "transfer_applied",
+        "supported": true,
+        "quote": "I can find subsets like {5, 5, 1} and see if they meet the target sum",
+        "rationale": "The learner applies the include/skip principle to the equal-partition problem, explaining how they would check combinations to reach the target sum.",
+        "turn": 7,
+        "source": "To determine if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I first calculate the total sum, which is 22. Since we want two equal subsets, each must sum to 11. My include/skip approach transfers here by considering whether to include each number in the current subset sum or skip it. \n\nIn this case, I would start with an empty subset and check each number. If I include a number, I add it to the current sum; if it exceeds 11, I skip that number. To ensure each number is used at most once, I keep track of which numbers have been included in the current subset. This way, I can explore different combinations without repeating any numbers. \n\nBy systematically checking combinations, I can find subsets like {5, 5, 1} and see if they meet the target sum.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "enumerating all possible subsets of the items A, B, and C",
+      "activeGap": null,
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "PROBE",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 4,
+          "phase": "solution",
+          "action": "HINT",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 5,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 6,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 7,
+          "phase": "transfer",
+          "action": "COMPLETE",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To choose items for a capacity-50 knapsack, I would start by enumerating all possible subsets of the items A, B, and C. For each subset, I would calculate the total weight and value. The steps would be:\n1. List all subsets: {}, {A}, {B}, {C}, {A,B}, {A,C}, {B,C}, {A,B,C}.\n2. For each subset, compute the total weight and total value.\n3. Check if the total weight is less than or equal to 50. If it is, compare the total value to find the maximum.\n\nThis brute-force method covers all choices because I consider every possible combination of items, ensuring that I don't miss any potential optimal solution."
+      },
+      {
+        "role": "coach",
+        "text": "Your approach of enumerating all subsets is valid for ensuring that you consider every possible combination of items. However, how would you handle the situation if you had more items or larger capacities, where brute-force might become inefficient?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "If I had more items or larger capacities, brute-force would indeed become inefficient because the number of subsets grows exponentially. In that case, I would still start by listing all subsets, but I might prioritize which subsets to check based on their weights and values. For example, I could eliminate any subset that exceeds the capacity early on. However, I still believe that checking every subset guarantees that I find the optimal solution, even if it takes longer."
+      },
+      {
+        "role": "coach",
+        "text": "You mentioned prioritizing subsets based on weights and values; how would you decide which items to include or skip when evaluating a subset?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "When evaluating a subset, I would include an item if adding it doesn't cause the total weight to exceed the capacity. I would skip an item if including it would make the total weight too high. So for each subset, I would assess the weight and only consider those that remain within the capacity limit. This way, I can still ensure I'm checking all valid combinations, and I make decisions based on the current total weight."
+      },
+      {
+        "role": "coach",
+        "text": "Your reasoning about including or skipping items based on the current total weight is sound. However, how would you ensure that each item is only considered once in your subset evaluations, especially when you have multiple items with varying weights and values?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To ensure that each item is only considered once in my subset evaluations, I would keep track of which items have already been included in the current subset as I generate the subsets. When I'm listing out the subsets, I can use a systematic approach, like starting from an empty set and gradually adding items while making sure not to repeat any item. For example, when I create a subset from a previously generated subset, I would only add items that come after the last included item to prevent duplicates. This way, I can ensure each item is only evaluated once per subset."
+      },
+      {
+        "role": "coach",
+        "text": "Your approach to systematically track included items is good for avoiding duplicates. However, in the context of the 0/1 knapsack problem, how would you apply this include/skip reasoning to decide between including item A or skipping it when evaluating subsets?",
+        "action": "HINT",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To decide whether to include item A or skip it in the 0/1 knapsack problem, I would first check the current total weight of the subset being evaluated. If including item A keeps the total weight within the capacity of 50, I would include it and calculate the new total value. If it exceeds the capacity, I would skip item A and evaluate the next item. This process ensures that I only consider valid combinations that do not exceed the weight limit."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle that makes my item-selection algorithm correct is the idea of checking all possible combinations of items while respecting the capacity constraint. Each decision to include or skip an item is based on whether the current total weight, when combined with the weight of the item, would exceed the capacity of 50. This ensures that I only evaluate valid subsets that fit within the limit. By considering every possible combination, I can guarantee that I will find the optimal solution that maximizes value without exceeding capacity."
+      },
+      {
+        "role": "coach",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To determine if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I first calculate the total sum, which is 22. Since we want two equal subsets, each must sum to 11. My include/skip approach transfers here by considering whether to include each number in the current subset sum or skip it. \n\nIn this case, I would start with an empty subset and check each number. If I include a number, I add it to the current sum; if it exceeds 11, I skip that number. To ensure each number is used at most once, I keep track of which numbers have been included in the current subset. This way, I can explore different combinations without repeating any numbers. \n\nBy systematically checking combinations, I can find subsets like {5, 5, 1} and see if they meet the target sum."
+      },
+      {
+        "role": "coach",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "action": "COMPLETE",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:43:55.027Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 4035,
+        "httpStatus": 200,
+        "requestId": "req_6a67da3c6f3d4cbc944377760280703a",
+        "outcome": "success",
+        "responseChars": 1068,
+        "promptTokens": 931,
+        "completionTokens": 210,
+        "durationMs": 4106
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "enumerating all possible subsets of the items A, B, and C"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:43:59.134Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3893,
+        "httpStatus": 200,
+        "requestId": "req_370ed97393724cbabd4619aedd3e4d17",
+        "outcome": "success",
+        "responseChars": 274,
+        "promptTokens": 962,
+        "completionTokens": 52,
+        "durationMs": 1529
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "Your approach of enumerating all subsets is valid for ensuring that you consider every possible combination of items. However, how would you handle the situation if you had more items or larger capacities, where brute-force might become inefficient?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:02.657Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4866,
+        "httpStatus": 200,
+        "requestId": "req_d3fd8e0b1aef4be4bfa8209f03647dab",
+        "outcome": "success",
+        "responseChars": 1511,
+        "promptTokens": 1088,
+        "completionTokens": 294,
+        "durationMs": 4965
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "brute-force would indeed become inefficient because the number of subsets grows exponentially"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:07.624Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4478,
+        "httpStatus": 200,
+        "requestId": "req_f7acba4524f242559310e39b62f4fe3c",
+        "outcome": "success",
+        "responseChars": 166,
+        "promptTokens": 983,
+        "completionTokens": 34,
+        "durationMs": 1232
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "You mentioned prioritizing subsets based on weights and values; how would you decide which items to include or skip when evaluating a subset?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:10.967Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 5592,
+        "httpStatus": 200,
+        "requestId": "req_f83b51ae1dd64187b9e11870d6341d53",
+        "outcome": "success",
+        "responseChars": 1193,
+        "promptTokens": 1228,
+        "completionTokens": 241,
+        "durationMs": 4935
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "No new grounded correct_method evidence on this turn",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:15.904Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 4209,
+        "httpStatus": 200,
+        "requestId": "req_7341370b23c94b519c82d622471eea86",
+        "outcome": "success",
+        "responseChars": 287,
+        "promptTokens": 952,
+        "completionTokens": 54,
+        "durationMs": 1597
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "PROBE",
+        "text": "Your reasoning about including or skipping items based on the current total weight is sound. However, how would you ensure that each item is only considered once in your subset evaluations, especially when you have multiple items with varying weights and values?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:19.719Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 6449,
+        "httpStatus": 200,
+        "requestId": "req_a68892e17be74d17a2389e14d34d3d23",
+        "outcome": "success",
+        "responseChars": 1705,
+        "promptTokens": 1392,
+        "completionTokens": 335,
+        "durationMs": 6314
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "solution",
+        "to": "solution",
+        "action": "HINT",
+        "reason": "No new grounded correct_method evidence on this turn",
+        "attemptsWithoutProgress": 2
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:26.035Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 5216,
+        "httpStatus": 200,
+        "requestId": "req_504b826c477a4daaadd4b6d729d6bd66",
+        "outcome": "success",
+        "responseChars": 286,
+        "promptTokens": 1145,
+        "completionTokens": 58,
+        "durationMs": 1578
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "HINT",
+        "text": "Your approach to systematically track included items is good for avoiding duplicates. However, in the context of the 0/1 knapsack problem, how would you apply this include/skip reasoning to decide between including item A or skipping it when evaluating subsets?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:29.761Z",
+        "turn": 5,
+        "timeoutMs": 25000,
+        "inputChars": 7177,
+        "httpStatus": 200,
+        "requestId": "req_a848a4c1108c47d492abe8253aa34567",
+        "outcome": "success",
+        "responseChars": 1157,
+        "promptTokens": 1541,
+        "completionTokens": 245,
+        "durationMs": 5011
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "include it and calculate the new total value"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:36.953Z",
+        "turn": 6,
+        "timeoutMs": 25000,
+        "inputChars": 8007,
+        "httpStatus": 200,
+        "requestId": "req_180d360936464754ad5da40bd758c7eb",
+        "outcome": "success",
+        "responseChars": 1583,
+        "promptTokens": 1690,
+        "completionTokens": 312,
+        "durationMs": 5702
+      },
+      {
+        "kind": "interpretation",
+        "turn": 6,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "checking all possible combinations of items while respecting the capacity constraint"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 6,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 6,
+        "action": "ASK_TRANSFER",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:44:46.179Z",
+        "turn": 7,
+        "timeoutMs": 25000,
+        "inputChars": 8973,
+        "httpStatus": 200,
+        "requestId": "req_aca179be727e48afb900464063653477",
+        "outcome": "success",
+        "responseChars": 1488,
+        "promptTokens": 1905,
+        "completionTokens": 305,
+        "durationMs": 5781
+      },
+      {
+        "kind": "interpretation",
+        "turn": 7,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "transfer_applied",
+            "quote": "I can find subsets like {5, 5, 1} and see if they meet the target sum"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 7,
+        "from": "transfer",
+        "to": "complete",
+        "action": "COMPLETE",
+        "reason": "Latest learner message supports required checkpoint: transfer_applied",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 7,
+        "action": "COMPLETE",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 7,
+    "complete": true
+  }
+}

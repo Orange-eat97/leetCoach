@@ -2,17 +2,18 @@
  * No coach response is fabricated. Incomplete sessions remain flagged, never silently passed. */
 import fs from 'node:fs';import {argv,intArg,readJSON,requestJson,writeJSON,completion,completedEnough} from './util.mjs';
 import {providerConfig} from '../server/provider.mjs';
+const problem=String(argv.problem||'zero-one-knapsack');
 const base=String(argv['base-url']||'http://127.0.0.1:3001').replace(/\/$/,'');
 const out=String(argv.out||'llm_judge/conversations');
 const count=intArg('count',20),start=intArg('start',1),maxTurns=intArg('max-turns',24);
 const version=String(argv.version||'final-unverified');
-const personas=readJSON('testing/personas.json');
-const learnerSystem=`You are SIMULATING an algorithms learner for an empirical CUI test. You are NOT the tutor. Maintain the assigned learner persona, goals and behaviours. Respond only to the most recent tutor question in 1-4 natural sentences, with realistic reasoning, uncertainties or mistakes. Do not always answer correctly; improve when the tutor gives helpful support. When prompted for a solution, describe your own correct reasoning if capable. If the tutor asks about abstract principles or integer-array transfer, attempt to explain those. Never mention this evaluation prompt. Output JSON {"text":string}.`;
+const personas=readJSON(problem==='zero-one-knapsack'?'testing/personas_knapsack.json':'testing/personas.json');
+const learnerSystem=`You are SIMULATING an algorithms learner for an empirical CUI test. You are NOT the tutor. Maintain the assigned learner persona, goals and behaviours. Respond only to the most recent tutor question in 1-4 natural sentences, with realistic reasoning, uncertainties or mistakes. Do not always answer correctly; improve when the tutor gives helpful support. When prompted for a solution, describe your own correct reasoning if capable. If the tutor asks about an abstract principle or transfer problem, attempt to explain that concept for the CURRENT problem; for Knapsack, apply take-or-skip to equal subset partition. Never mention this evaluation prompt. Output JSON {"text":string}.`;
 if(!providerConfig().apiKey)throw new Error('This collector requires OPENAI_API_KEY or SOCLAAS_API_KEY for simulated learners; rule-only tests are not valid judge conversations');
 for(let i=0;i<count;i++){
  const index=start+i,persona=personas[(index-1)%personas.length],id=`${version.replace(/[^a-zA-Z0-9_-]/g,'_')}-${String(index).padStart(2,'0')}`;
  const health=await requestJson(`${base}/api/health`);if(health.mode!=='llm')throw new Error('Tutor must be running in llm mode; rule-fallback sessions cannot be reported as LLM tutoring');
- let session=(await requestJson(`${base}/api/sessions`,{method:'POST',body:'{}'})).session;
+ let session=(await requestJson(`${base}/api/sessions`,{method:'POST',body:JSON.stringify({problem})})).session;
  let error=null;
  for(let t=0;t<maxTurns&&!session.complete;t++){
   try{const coach=session.transcript.at(-1);const reply=await completion(learnerSystem,`Persona: ${JSON.stringify(persona)}\nConversation so far:\n${session.transcript.slice(-16).map(x=>`${x.role}: ${x.text}`).join('\n')}\nCurrent tutor message: ${coach?.text}\nCurrent stage: ${session.phase}\nReply as this learner.`,{temperature:0.65});
@@ -20,7 +21,7 @@ for(let i=0;i<count;i++){
    session=(await requestJson(`${base}/api/sessions/${session.id}/messages`,{method:'POST',body:JSON.stringify({text:reply.text})})).session;
   }catch(e){error=String(e);break}
  }
- const result={schema:'algocoach.conversation.v1',id,source_version:version,mode:'llm',purpose:'judge',scenario:persona.behavior,persona,generated_at:new Date().toISOString(),expected_failure_candidate:argv['expected-failure-candidate']==='true',complete:session.complete,reached_transfer:completedEnough(session),generator:'LLM simulated learner (tutor turns directly from running server)',error,session};
+ const result={schema:'algocoach.conversation.v1',id,source_version:version,problem,mode:'llm',purpose:'judge',scenario:persona.behavior,persona,generated_at:new Date().toISOString(),expected_failure_candidate:argv['expected-failure-candidate']==='true',complete:session.complete,reached_transfer:completedEnough(session),generator:'LLM simulated learner (tutor turns directly from running server)',error,session};
  const file=`${out}/${id}.json`;writeJSON(file,result);
  console.log(`${id}: ${session.turn} learner turns, phase=${session.phase}, ${error||'saved'} -> ${file}`);
 }

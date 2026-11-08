@@ -1,0 +1,328 @@
+{
+  "schema": "algocoach.judge-results.v1",
+  "model": "gpt-4o-mini",
+  "prompt_version": "a2_v2",
+  "created_at": "2026-11-07T07:51:47.325Z",
+  "results": [
+    {
+      "conversation_id": "knapsack-pilot-01",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning, challenges their specific method, and encourages exploration of alternatives without assuming gaps or misinterpretations.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "knapsack-pilot-01",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner consistently justified their reasoning and decisions throughout the conversation, demonstrating a clear understanding of the exhaustive enumeration approach for the 0/1 knapsack problem and effectively transferring that understanding to the equal partition problem.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "knapsack-pilot-02",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning about their method, challenges their approach with specific questions about scalability and decision-making, and builds on their explanations without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "knapsack-pilot-02",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to the 0/1 knapsack problem, demonstrating a correct exhaustive enumeration method and addressing the item-once constraint. They also successfully transferred this reasoning to the equal partition problem, ensuring each number is used at most once.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "knapsack-pilot-03",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning, challenges their heuristic approach, and builds on their evolving understanding of dynamic programming and optimal substructure.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "knapsack-pilot-03",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to the 0/1 knapsack problem, including the take-or-skip mechanism and the dynamic programming method. They also successfully transferred this understanding to the equal partition problem, demonstrating how to ensure each number is used at most once.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-04",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention is grounded in the learner's expressed reasoning, challenging their heuristic approach and engaging with their specific method and uncertainties.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-04",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's approach to the 0/1 knapsack problem relies on a greedy strategy based on value-to-weight ratios, which is incorrect for this problem. Although they later mention dynamic programming, they do not adequately explain the exhaustive enumeration or take-or-skip mechanism necessary for correctness before advancing. Additionally, the transition to equal partitioning lacks a clear mechanism ensuring each number is used at most once, as required.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning, challenges their heuristic approach, and encourages deeper exploration of their method without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's approach to the 0/1 knapsack problem initially relied on a value-to-weight ratio, which is incorrect. Although they later recognized the need to evaluate combinations, they did not provide a complete mechanism for the take-or-skip decision that ensures correctness, nor did they adequately address the backtracking aspect. Therefore, a material conceptual gap remains.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-06",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning and uncertainties, challenging their approach while remaining grounded in their specific statements about item selection and capacity constraints.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-06",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner consistently justified their reasoning and decisions regarding the 0/1 knapsack problem, demonstrating a clear understanding of the take-or-skip mechanism and ensuring items are not reused. They also effectively transferred this understanding to the equal partition problem, explaining how to track sums and maintain the item constraint.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-07",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenges and hints do not sufficiently engage with the learner's specific reasoning or uncertainties. For example, the tutor fails to address the learner's mention of balancing weight and potential value in a grounded way, and instead offers generic suggestions about using DP without directly connecting to the learner's expressed concerns.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-07",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner expresses uncertainty about maximizing total value and conflates the current knapsack objective with equal partitioning, indicating unresolved conceptual gaps.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-08",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 does not engage the learner's specific reasoning about selecting items based on value-to-weight ratio, nor does it ask for clarification on their method. Instead, it generically states the need to consider combinations without addressing the learner's expressed uncertainty about evaluating combinations.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-08",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's understanding of the 0/1 knapsack problem is incomplete, particularly in justifying how to evaluate combinations of items and the impact of removing items. They express uncertainty about calculating the best combinations and do not provide a clear mechanism for ensuring correctness in their approach.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-09",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's reasoning, challenges their flawed heuristic, and prompts them to clarify their understanding without assuming gaps or misinterpretations.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-09",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's approach to the 0/1 knapsack problem relies on a greedy method based on value-to-weight ratios, which is incorrect for this problem type. Although they later recognize a scenario where this method fails, they do not provide a correct exhaustive or dynamic programming mechanism for the knapsack problem, leaving a material gap in understanding.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-10",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention is grounded in the learner's expressed reasoning, addressing specific aspects of their approach and asking clarifying questions to deepen understanding.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-10",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to both the 0/1 knapsack problem and the equal partition problem, demonstrating a consistent understanding of the necessary mechanisms without unresolved gaps.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-11",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning, challenges their specific misconceptions, and builds on their thought process without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-11",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's approach to the 0/1 knapsack problem initially relied on a value-to-weight ratio, which is incorrect. Although they later described a dynamic programming approach, they did not adequately justify the include/skip mechanism for each item, particularly in relation to ensuring items are not reused. The tutor's probing did not resolve this material gap before advancing.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-12",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention is grounded in the learner's expressed reasoning, challenging their heuristic approach and engaging with their understanding of the include/skip method.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-12",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and correct explanation of the include/skip mechanism for both the 0/1 knapsack problem and the equal partition problem, justifying each decision and ensuring that each item is used at most once.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 does not engage with the learner's specific reasoning about selecting items based on value, nor does it ask for clarification on their method. Instead, it generically prompts for handling capacity without addressing the learner's expressed approach.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's understanding of the 0/1 knapsack problem is incomplete, as they rely on vague statements about using a dynamic programming approach without detailing the exhaustive enumeration or take-or-skip mechanism necessary for correctness.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-14",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's specific reasoning and uncertainties, challenging their approach and prompting deeper consideration of their decisions without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-14",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their reasoning process for selecting items in the 0/1 knapsack problem, demonstrating an understanding of the take-or-skip mechanism and ensuring each item is used at most once. They also successfully transferred this reasoning to the equal partition problem, maintaining consistency in their approach.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-15",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor hint and challenge is grounded in the learner's expressed reasoning, addressing their specific method and uncertainties about the knapsack problem and subset partitioning.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-15",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner conflates the knapsack objective with the equal-partition objective, indicating unresolved uncertainty about the mechanisms essential to correctness.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-16",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning, challenges their heuristic approach, and encourages deeper exploration of the problem without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-16",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner did not provide a correct exhaustive/take-or-skip mechanism for the 0/1 knapsack problem, as they relied on a greedy approach without justifying its correctness or addressing the need for a complete enumeration of combinations.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-17",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's reasoning, challenges their flawed greedy approach, and prompts them to clarify their decision-making process without assuming gaps or misinterpretations.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-17",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to the 0/1 knapsack problem, including the decision-making process for including or skipping items based on capacity and value. They also correctly identified the optimal substructure principle and effectively transferred this reasoning to the equal partition problem, demonstrating understanding of the include/skip mechanism and ensuring each number is used at most once.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-18",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention is grounded in the learner's expressed reasoning, addressing specific aspects of their method and asking clarifying questions to deepen understanding.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-18",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to the 0/1 knapsack problem, including exhaustive enumeration and the include/skip mechanism. They also successfully transferred this reasoning to the equal partition problem, demonstrating understanding of the constraints and ensuring each item is used at most once.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-19",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's expressed reasoning and uncertainties, challenging their approach and prompting deeper consideration of combinations without introducing ungrounded assumptions.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-19",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner consistently justified their reasoning and decisions regarding item selection in the knapsack problem, demonstrating a clear understanding of the take-or-skip mechanism and the importance of combinations without exceeding capacity.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-20",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "Every tutor intervention engages the learner's reasoning, challenges their heuristic approach, and builds on their expressed understanding of combinations and dynamic programming.",
+      "prompt_version": "a2_v2"
+    },
+    {
+      "conversation_id": "final-knapsack-20",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner provided a clear and justified explanation of their approach to the 0/1 knapsack problem, including a systematic exploration of combinations and a correct application of the include-or-skip principle. They also successfully transferred this understanding to the equal partition problem, ensuring each number is used at most once.",
+      "prompt_version": "a2_v2"
+    }
+  ]
+}

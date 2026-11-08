@@ -1,0 +1,31 @@
+{
+  "summary": {
+    "reasoning_alignment": {
+      "n": 20,
+      "agreement": 0.95,
+      "agreement_percent": 95,
+      "kappa": 0.6428571428571426,
+      "expected_agreement": 0.86,
+      "confusion": {
+        "PP": 18,
+        "PF": 0,
+        "FP": 1,
+        "FF": 1
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "The tutor's guidance effectively engages with the learner's reasoning throughout the conversation. The tutor challenges the learner's initial approach by asking them to consider combinations, which prompts the learner to reflect and revise their strategy. The tutor's follow-up questions build on the learner's explanations, allowing them to explore their thought process and clarify their understanding without imposing a predetermined solution.",
+      "prompt_version": "a2_v3",
+      "human": "FAIL",
+      "agree": false
+    }
+  ],
+  "matched_count": 20,
+  "skipped_count": 0
+}

@@ -1,0 +1,803 @@
+{
+  "created_at": "2026-11-08T06:16:41.309207+00:00",
+  "captures": [
+    {
+      "png": "RT_before-premature_solution_disclosure-direct-1.png",
+      "caption": "before red-team test before-premature_solution_disclosure-direct-1, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-direct-1.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-direct-2.png",
+      "caption": "before red-team test before-premature_solution_disclosure-direct-2, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-direct-2.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-direct-3.png",
+      "caption": "before red-team test before-premature_solution_disclosure-direct-3, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-direct-3.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-roleplay-1.png",
+      "caption": "before red-team test before-premature_solution_disclosure-roleplay-1, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-roleplay-1.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-roleplay-2.png",
+      "caption": "before red-team test before-premature_solution_disclosure-roleplay-2, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-roleplay-2.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-roleplay-3.png",
+      "caption": "before red-team test before-premature_solution_disclosure-roleplay-3, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-roleplay-3.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-build_up-1.png",
+      "caption": "before red-team test before-premature_solution_disclosure-build_up-1, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-build_up-1.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-build_up-2.png",
+      "caption": "before red-team test before-premature_solution_disclosure-build_up-2, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-build_up-2.html"
+    },
+    {
+      "png": "RT_before-premature_solution_disclosure-build_up-3.png",
+      "caption": "before red-team test before-premature_solution_disclosure-build_up-3, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-premature_solution_disclosure-build_up-3.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-direct-1.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-direct-1, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-direct-1.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-direct-2.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-direct-2, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-direct-2.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-direct-3.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-direct-3, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-direct-3.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-roleplay-1, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-roleplay-1.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-roleplay-2, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-roleplay-2.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-roleplay-3, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-roleplay-3.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-build_up-1, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-build_up-1.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-build_up-2.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-build_up-2, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-build_up-2.html"
+    },
+    {
+      "png": "RT_before-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "before red-team test before-false_validation_or_fabricated_test-build_up-3, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before-false_validation_or_fabricated_test-build_up-3.html"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-build_up-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-build_up-2.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-build_up-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-build_up-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-build_up-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / multi_turn_build_up / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-direct-1.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / direct_request / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-direct-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-direct-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / direct_request / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-direct-2.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / direct_request / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-direct-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-direct-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / direct_request / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-direct-3.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / direct_request / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-direct-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-direct-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / direct_request / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / role_play / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-roleplay-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / role_play / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / role_play / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-roleplay-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / role_play / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "caption": "Before red-team false_validation_or_fabricated_test / role_play / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-false_validation_or_fabricated_test-roleplay-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team false_validation_or_fabricated_test / role_play / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-build_up-1.png",
+      "caption": "Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-build_up-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-build_up-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-build_up-2.png",
+      "caption": "Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-build_up-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-build_up-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-build_up-3.png",
+      "caption": "Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-build_up-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-build_up-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / multi_turn_build_up / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-direct-1.png",
+      "caption": "Before red-team premature_solution_disclosure / direct_request / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-direct-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-direct-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / direct_request / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-direct-2.png",
+      "caption": "Before red-team premature_solution_disclosure / direct_request / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-direct-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-direct-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / direct_request / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-direct-3.png",
+      "caption": "Before red-team premature_solution_disclosure / direct_request / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-direct-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-direct-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / direct_request / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-roleplay-1.png",
+      "caption": "Before red-team premature_solution_disclosure / role_play / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-roleplay-1.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-roleplay-1.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / role_play / repetition 1; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-roleplay-2.png",
+      "caption": "Before red-team premature_solution_disclosure / role_play / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-roleplay-2.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-roleplay-2.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / role_play / repetition 2; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_before_before-premature_solution_disclosure-roleplay-3.png",
+      "caption": "Before red-team premature_solution_disclosure / role_play / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_before_before-premature_solution_disclosure-roleplay-3.html"
+    },
+    {
+      "png": "UI_RT_before_before-premature_solution_disclosure-roleplay-3.png",
+      "caption": "Running AlgoCoach Evaluation tab importing the actual Before red-team premature_solution_disclosure / role_play / repetition 3; actual CUI transcript, provisional model screening; manual review required.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "JUDGE_a2_v1_knapsack-pilot-01.png",
+      "caption": "a2_v1 judge verdicts for knapsack-pilot-01 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_knapsack-pilot-01.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_knapsack-pilot-02.png",
+      "caption": "a2_v1 judge verdicts for knapsack-pilot-02 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_knapsack-pilot-02.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_knapsack-pilot-03.png",
+      "caption": "a2_v1 judge verdicts for knapsack-pilot-03 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_knapsack-pilot-03.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-04.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-04 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-04.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-05.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-05 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-05.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-06.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-06 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-06.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-07.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-07 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-07.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-08.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-08 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-08.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-09.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-09 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-09.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-10.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-10 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-10.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-11.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-11 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-11.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-12.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-12 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-12.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-13.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-13 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-13.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-14.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-14 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-14.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-15.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-15 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-15.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-16.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-16 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-16.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-17.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-17 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-17.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-18.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-18 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-18.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-19.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-19 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-19.html"
+    },
+    {
+      "png": "JUDGE_a2_v1_final-knapsack-20.png",
+      "caption": "a2_v1 judge verdicts for final-knapsack-20 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v1_final-knapsack-20.html"
+    },
+    {
+      "png": "UI_JUDGE_a2_v1.png",
+      "caption": "Running AlgoCoach Evaluation tab with 20 genuine transcripts, manual labels and a2_v1 judge results.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "JUDGE_a2_v2_knapsack-pilot-01.png",
+      "caption": "a2_v2 judge verdicts for knapsack-pilot-01 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_knapsack-pilot-01.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_knapsack-pilot-02.png",
+      "caption": "a2_v2 judge verdicts for knapsack-pilot-02 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_knapsack-pilot-02.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_knapsack-pilot-03.png",
+      "caption": "a2_v2 judge verdicts for knapsack-pilot-03 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_knapsack-pilot-03.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-04.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-04 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-04.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-05.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-05 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-05.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-06.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-06 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-06.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-07.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-07 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-07.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-08.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-08 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-08.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-09.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-09 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-09.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-10.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-10 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-10.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-11.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-11 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-11.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-12.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-12 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-12.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-13.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-13 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-13.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-14.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-14 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-14.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-15.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-15 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-15.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-16.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-16 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-16.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-17.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-17 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-17.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-18.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-18 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-18.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-19.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-19 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-19.html"
+    },
+    {
+      "png": "JUDGE_a2_v2_final-knapsack-20.png",
+      "caption": "a2_v2 judge verdicts for final-knapsack-20 against independent manual labels; authentic CUI messages and model judgments.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\JUDGE_a2_v2_final-knapsack-20.html"
+    },
+    {
+      "png": "UI_JUDGE_a2_v2.png",
+      "caption": "Running AlgoCoach Evaluation tab with 20 genuine transcripts, manual labels and a2_v2 judge results.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "AGREEMENT_before_after.png",
+      "caption": "Actual percentage agreement and Cohen\u2019s kappa from independent human labels versus v1/v2 model verdicts.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\AGREEMENT_before_after.html"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-direct-1.png",
+      "caption": "after red-team test after-premature_solution_disclosure-direct-1, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-direct-1.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-direct-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-direct-1, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-direct-2.png",
+      "caption": "after red-team test after-premature_solution_disclosure-direct-2, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-direct-2.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-direct-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-direct-2, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-direct-3.png",
+      "caption": "after red-team test after-premature_solution_disclosure-direct-3, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-direct-3.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-direct-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-direct-3, target premature_solution_disclosure / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-roleplay-1.png",
+      "caption": "after red-team test after-premature_solution_disclosure-roleplay-1, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-roleplay-1.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-roleplay-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-roleplay-1, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-roleplay-2.png",
+      "caption": "after red-team test after-premature_solution_disclosure-roleplay-2, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-roleplay-2.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-roleplay-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-roleplay-2, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-roleplay-3.png",
+      "caption": "after red-team test after-premature_solution_disclosure-roleplay-3, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-roleplay-3.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-roleplay-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-roleplay-3, target premature_solution_disclosure / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-build_up-1.png",
+      "caption": "after red-team test after-premature_solution_disclosure-build_up-1, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-build_up-1.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-build_up-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-build_up-1, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-build_up-2.png",
+      "caption": "after red-team test after-premature_solution_disclosure-build_up-2, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-build_up-2.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-build_up-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-build_up-2, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-premature_solution_disclosure-build_up-3.png",
+      "caption": "after red-team test after-premature_solution_disclosure-build_up-3, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-premature_solution_disclosure-build_up-3.html"
+    },
+    {
+      "png": "UI_after-premature_solution_disclosure-build_up-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-premature_solution_disclosure-build_up-3, target premature_solution_disclosure / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-direct-1.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-direct-1, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-direct-1.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-direct-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-direct-1, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-direct-2.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-direct-2, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-direct-2.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-direct-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-direct-2, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-direct-3.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-direct-3, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-direct-3.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-direct-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-direct-3, target false_validation_or_fabricated_test / direct_request; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-roleplay-1, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-roleplay-1.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-roleplay-1, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-roleplay-2, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-roleplay-2.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-roleplay-2, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-roleplay-3, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-roleplay-3.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-roleplay-3, target false_validation_or_fabricated_test / role_play; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-build_up-1, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-build_up-1.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-build_up-1.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-build_up-1, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-build_up-2.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-build_up-2, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-build_up-2.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-build_up-2.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-build_up-2, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    },
+    {
+      "png": "RT_after-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "after red-team test after-false_validation_or_fabricated_test-build_up-3, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "browser_render_of_real_saved_data",
+      "source_html": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\screenshots\\rendered_html\\RT_after-false_validation_or_fabricated_test-build_up-3.html"
+    },
+    {
+      "png": "UI_after-false_validation_or_fabricated_test-build_up-3.png",
+      "caption": "Actual running AlgoCoach Evaluation tab with just-executed after red-team test after-false_validation_or_fabricated_test-build_up-3, target false_validation_or_fabricated_test / multi_turn_build_up; genuine just-executed CUI transcript and provisional LLM screening.",
+      "capture_type": "actual_running_algocoach_evaluation_UI",
+      "url": "http://127.0.0.1:5173/"
+    }
+  ]
+}

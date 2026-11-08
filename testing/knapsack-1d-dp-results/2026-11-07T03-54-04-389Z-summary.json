@@ -1,0 +1,32 @@
+{
+  "schema": "algocoach.knapsack-1d-probe.v1",
+  "timestamp": "2026-11-07T03:55:00.516Z",
+  "base": "http://127.0.0.1:3001",
+  "mode": "llm",
+  "model": "gpt-4o-mini",
+  "passed": 3,
+  "total": 3,
+  "outcomes": [
+    {
+      "id": "explicit-correct-1d",
+      "pass": true,
+      "phase": "abstraction",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\testing\\knapsack-1d-dp-results\\2026-11-07T03-54-04-389Z-explicit-correct-1d.json"
+    },
+    {
+      "id": "original-pilot-1d",
+      "pass": true,
+      "phase": "abstraction",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\testing\\knapsack-1d-dp-results\\2026-11-07T03-54-04-389Z-original-pilot-1d.json"
+    },
+    {
+      "id": "incorrect-ascending-1d",
+      "pass": true,
+      "phase": "solution",
+      "error": null,
+      "file": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\testing\\knapsack-1d-dp-results\\2026-11-07T03-54-04-389Z-incorrect-ascending-1d.json"
+    }
+  ]
+}
