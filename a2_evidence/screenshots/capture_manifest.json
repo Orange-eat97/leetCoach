@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-08T11:04:51.020211+00:00",
+  "created_at": "2026-11-09T05:35:13.988Z",
   "captures": [
     {
       "png": "RT_before-premature_solution_disclosure-direct-1.png",
@@ -861,6 +861,16 @@
       "capture_type": "actual_running_algocoach_read_only_replay_UI",
       "url": "http://127.0.0.1:5174/?mode=replay",
       "source_json": "C:\\Users\\User\\Documents\\ChatGPT\\CS3249 assignment 1\\a2_evidence\\corpus_pool\\fresh_final\\final-knapsack-07.json"
+    },
+    {
+      "png": "UI_JUDGE_a2_v3.png",
+      "caption": "Post-hoc capture of the running AlgoCoach Evaluation interface loading the preserved a2_v3 C1 judge results and independent human labels; selected case final-knapsack-05 shows the recorded disagreement. The aggregate result is 95% agreement and Cohen kappa 0.643 in a2_v3_c1_agreement.json.",
+      "capture_type": "actual_running_algocoach_evaluation_UI_replay_of_saved_results",
+      "url": "http://127.0.0.1:5176/",
+      "source_judge_results": "llm_judge/judge_results/a2_v3_c1_results.json",
+      "source_human_labels": "llm_judge/human_labels.json",
+      "source_agreement": "llm_judge/judge_results/a2_v3_c1_agreement.json",
+      "captured_at": "2026-11-09T05:35:13.975Z"
     }
   ]
 }
