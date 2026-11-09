@@ -1,0 +1,1805 @@
+{
+  "generated_at": "2026-11-09T07:37:36.995Z",
+  "student_id": "A0300281X",
+  "status": "FINAL_AI_LOGS_INCLUDED",
+  "ai_log_files": [
+    "ai_logs/AI_ASSISTANCE_LOG.md",
+    "ai_logs/current_codex_thread_visible_transcript.md"
+  ],
+  "content_file_count": 448,
+  "total_content_bytes": 27901670,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 69
+    },
+    {
+      "path": "a2_codex_eval/capture.py",
+      "bytes": 18541
+    },
+    {
+      "path": "a2_codex_eval/CODEX_HANDOFF.md",
+      "bytes": 8124
+    },
+    {
+      "path": "a2_codex_eval/configs/redteam_knapsack.json",
+      "bytes": 3500
+    },
+    {
+      "path": "a2_codex_eval/docs/ARCHITECTURE_AND_IMPLEMENTATION.md",
+      "bytes": 4935
+    },
+    {
+      "path": "a2_codex_eval/docs/TEST_MATRIX.md",
+      "bytes": 7030
+    },
+    {
+      "path": "a2_codex_eval/docs/USER_STUDY_DESIGN.md",
+      "bytes": 7767
+    },
+    {
+      "path": "a2_codex_eval/examples/EXAMPLE_previous_live_transcript.png",
+      "bytes": 290988
+    },
+    {
+      "path": "a2_codex_eval/prompts/v1/evidence_gating.md",
+      "bytes": 1140
+    },
+    {
+      "path": "a2_codex_eval/prompts/v1/reasoning_alignment.md",
+      "bytes": 920
+    },
+    {
+      "path": "a2_codex_eval/prompts/v2-template/evidence_gating.md",
+      "bytes": 196
+    },
+    {
+      "path": "a2_codex_eval/prompts/v2-template/reasoning_alignment.md",
+      "bytes": 196
+    },
+    {
+      "path": "a2_codex_eval/quality_audit.py",
+      "bytes": 3207
+    },
+    {
+      "path": "a2_codex_eval/README.md",
+      "bytes": 8263
+    },
+    {
+      "path": "a2_codex_eval/run.py",
+      "bytes": 36662
+    },
+    {
+      "path": "a2_codex_eval/scripts/run_a2_codex.ps1",
+      "bytes": 1288
+    },
+    {
+      "path": "a2_codex_eval/seeds/historical-hotfix-stall.json",
+      "bytes": 15947
+    },
+    {
+      "path": "a2_codex_eval/seeds/historical-pre-hotfix-transfer.json",
+      "bytes": 18294
+    },
+    {
+      "path": "a2_codex_eval/seeds/knapsack-pilot-01.json",
+      "bytes": 21339
+    },
+    {
+      "path": "a2_codex_eval/seeds/knapsack-pilot-02.json",
+      "bytes": 22681
+    },
+    {
+      "path": "a2_codex_eval/seeds/knapsack-pilot-03.json",
+      "bytes": 26855
+    },
+    {
+      "path": "a2_codex_eval/tests/test_package.py",
+      "bytes": 3498
+    },
+    {
+      "path": "a2_codex_eval/VERIFICATION.md",
+      "bytes": 1440
+    },
+    {
+      "path": "ai_logs/AI_ASSISTANCE_LOG.md",
+      "bytes": 12023
+    },
+    {
+      "path": "ai_logs/current_codex_thread_visible_transcript.md",
+      "bytes": 6790
+    },
+    {
+      "path": "baseline/server/engine.mjs",
+      "bytes": 8864
+    },
+    {
+      "path": "baseline/server/index.mjs",
+      "bytes": 2259
+    },
+    {
+      "path": "baseline/server/models.mjs",
+      "bytes": 7168
+    },
+    {
+      "path": "docs/storyboard.md",
+      "bytes": 5784
+    },
+    {
+      "path": "docs/System Design Overview Infographic.png",
+      "bytes": 1703153
+    },
+    {
+      "path": "docs/video-script.md",
+      "bytes": 5578
+    },
+    {
+      "path": "evidence/reports/disagreements_a2_v1.md",
+      "bytes": 4010
+    },
+    {
+      "path": "evidence/reports/disagreements_a2_v2.md",
+      "bytes": 4905
+    },
+    {
+      "path": "evidence/reports/judge_a2_v1_analysis.json",
+      "bytes": 6501
+    },
+    {
+      "path": "evidence/reports/judge_a2_v2_analysis.json",
+      "bytes": 7396
+    },
+    {
+      "path": "evidence/reports/judge_v1_v2_comparison.md",
+      "bytes": 2379
+    },
+    {
+      "path": "evidence/reports/quality_audit.csv",
+      "bytes": 1595
+    },
+    {
+      "path": "evidence/reports/quality_audit.json",
+      "bytes": 4713
+    },
+    {
+      "path": "evidence/reports/redteam_v4_manual_results.md",
+      "bytes": 1268
+    },
+    {
+      "path": "evidence/reports/redteam_v5_manual_results.md",
+      "bytes": 1470
+    },
+    {
+      "path": "evidence/reports/redteam_v6_execution_status.md",
+      "bytes": 1061
+    },
+    {
+      "path": "evidence/screenshots/AGREEMENT_before_after.png",
+      "bytes": 46629
+    },
+    {
+      "path": "evidence/screenshots/appendix_screenshot_index.md",
+      "bytes": 35705
+    },
+    {
+      "path": "evidence/screenshots/capture_manifest.json",
+      "bytes": 69392
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-04.png",
+      "bytes": 224697
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-05.png",
+      "bytes": 180814
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-06.png",
+      "bytes": 223440
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-07.png",
+      "bytes": 720852
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-08.png",
+      "bytes": 240151
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-09.png",
+      "bytes": 200516
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-10.png",
+      "bytes": 244443
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-11.png",
+      "bytes": 246347
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-12.png",
+      "bytes": 200216
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-13.png",
+      "bytes": 286298
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-14.png",
+      "bytes": 198566
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-15.png",
+      "bytes": 278930
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-16.png",
+      "bytes": 203988
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-17.png",
+      "bytes": 195481
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-18.png",
+      "bytes": 241863
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-19.png",
+      "bytes": 182340
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_final-knapsack-20.png",
+      "bytes": 195864
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_knapsack-pilot-01.png",
+      "bytes": 181125
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_knapsack-pilot-02.png",
+      "bytes": 185061
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v1_knapsack-pilot-03.png",
+      "bytes": 229545
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-04.png",
+      "bytes": 226780
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-05.png",
+      "bytes": 187324
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-06.png",
+      "bytes": 228852
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-07.png",
+      "bytes": 720520
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-08.png",
+      "bytes": 241635
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-09.png",
+      "bytes": 204370
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-10.png",
+      "bytes": 246577
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-11.png",
+      "bytes": 251011
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-12.png",
+      "bytes": 198496
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-13.png",
+      "bytes": 287301
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-14.png",
+      "bytes": 204229
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-15.png",
+      "bytes": 278856
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-16.png",
+      "bytes": 203439
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-17.png",
+      "bytes": 204300
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-18.png",
+      "bytes": 245095
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-19.png",
+      "bytes": 184056
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_final-knapsack-20.png",
+      "bytes": 200525
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_knapsack-pilot-01.png",
+      "bytes": 186008
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_knapsack-pilot-02.png",
+      "bytes": 190239
+    },
+    {
+      "path": "evidence/screenshots/JUDGE_a2_v2_knapsack-pilot-03.png",
+      "bytes": 231004
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_after-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 87601
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_after-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 89559
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_after-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 88308
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_before-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 114433
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_before-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 112973
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_final-knapsack-05.png",
+      "bytes": 130737
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_final-knapsack-07.png",
+      "bytes": 133831
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_final-knapsack-07_message-13.png",
+      "bytes": 113359
+    },
+    {
+      "path": "evidence/screenshots/REPLAY_final-knapsack-16.png",
+      "bytes": 126797
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 92720
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 94133
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 89607
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 66448
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 66736
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 71556
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 68583
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 68876
+    },
+    {
+      "path": "evidence/screenshots/RT_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 68946
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-build_up-1.png",
+      "bytes": 94754
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-build_up-2.png",
+      "bytes": 97814
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-build_up-3.png",
+      "bytes": 95476
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-direct-1.png",
+      "bytes": 69029
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-direct-2.png",
+      "bytes": 69368
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-direct-3.png",
+      "bytes": 69472
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 68306
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 68566
+    },
+    {
+      "path": "evidence/screenshots/RT_after-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 68653
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 126285
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 122498
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 125494
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 81024
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 79020
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 83213
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 81563
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 81867
+    },
+    {
+      "path": "evidence/screenshots/RT_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 82004
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-build_up-1.png",
+      "bytes": 127234
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-build_up-2.png",
+      "bytes": 127793
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-build_up-3.png",
+      "bytes": 106288
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-direct-1.png",
+      "bytes": 73208
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-direct-2.png",
+      "bytes": 73622
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-direct-3.png",
+      "bytes": 73816
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 82412
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 84764
+    },
+    {
+      "path": "evidence/screenshots/RT_before-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 82731
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 126285
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 122498
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 125494
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 81024
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 79020
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 83213
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 81563
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 81867
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 82004
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-build_up-1.png",
+      "bytes": 127234
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-build_up-2.png",
+      "bytes": 127793
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-build_up-3.png",
+      "bytes": 106288
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-direct-1.png",
+      "bytes": 73208
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-direct-2.png",
+      "bytes": 73622
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-direct-3.png",
+      "bytes": 73816
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 82412
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 84764
+    },
+    {
+      "path": "evidence/screenshots/RT_before_before-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 82731
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 112309
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 111859
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 107014
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 87917
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 88046
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 93055
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 90125
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 90240
+    },
+    {
+      "path": "evidence/screenshots/UI_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 90243
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-build_up-1.png",
+      "bytes": 110367
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-build_up-2.png",
+      "bytes": 113673
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-build_up-3.png",
+      "bytes": 112313
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-direct-1.png",
+      "bytes": 89645
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-direct-2.png",
+      "bytes": 89643
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-direct-3.png",
+      "bytes": 89614
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 87605
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 87718
+    },
+    {
+      "path": "evidence/screenshots/UI_after-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 87718
+    },
+    {
+      "path": "evidence/screenshots/UI_JUDGE_a2_v1.png",
+      "bytes": 166176
+    },
+    {
+      "path": "evidence/screenshots/UI_JUDGE_a2_v2.png",
+      "bytes": 168712
+    },
+    {
+      "path": "evidence/screenshots/UI_JUDGE_a2_v3.png",
+      "bytes": 177041
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 120993
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 116340
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 120618
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 94882
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 96208
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 96198
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 94828
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 94931
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 94927
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-build_up-1.png",
+      "bytes": 119094
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-build_up-2.png",
+      "bytes": 122150
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-build_up-3.png",
+      "bytes": 109113
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-direct-1.png",
+      "bytes": 86627
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-direct-2.png",
+      "bytes": 86763
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-direct-3.png",
+      "bytes": 87043
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 96389
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 95728
+    },
+    {
+      "path": "evidence/screenshots/UI_RT_before_before-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 95602
+    },
+    {
+      "path": "index.html",
+      "bytes": 435
+    },
+    {
+      "path": "llm_judge/a2_selected_20.json",
+      "bytes": 622353
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-04.json",
+      "bytes": 26269
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-05.json",
+      "bytes": 21708
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-06.json",
+      "bytes": 26579
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-07.json",
+      "bytes": 80577
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-08.json",
+      "bytes": 28450
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-09.json",
+      "bytes": 23057
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-10.json",
+      "bytes": 28817
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-11.json",
+      "bytes": 28666
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-12.json",
+      "bytes": 23202
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-13.json",
+      "bytes": 34667
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-14.json",
+      "bytes": 23182
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-15.json",
+      "bytes": 33627
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-16.json",
+      "bytes": 25084
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-17.json",
+      "bytes": 22803
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-18.json",
+      "bytes": 28277
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-19.json",
+      "bytes": 21885
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/final-knapsack-20.json",
+      "bytes": 23005
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/knapsack-pilot-01.json",
+      "bytes": 21802
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/knapsack-pilot-02.json",
+      "bytes": 23145
+    },
+    {
+      "path": "llm_judge/conversations/a2_selected/knapsack-pilot-03.json",
+      "bytes": 27398
+    },
+    {
+      "path": "llm_judge/conversations/README.md",
+      "bytes": 330
+    },
+    {
+      "path": "llm_judge/generation/generate_conversations.mjs",
+      "bytes": 3673
+    },
+    {
+      "path": "llm_judge/generation/simulated_learner_prompt.md",
+      "bytes": 991
+    },
+    {
+      "path": "llm_judge/generation/util.mjs",
+      "bytes": 3049
+    },
+    {
+      "path": "llm_judge/human_labels.json",
+      "bytes": 4519
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v1_agreement.json",
+      "bytes": 5017
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v1_results.json",
+      "bytes": 17460
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v2_agreement.json",
+      "bytes": 5912
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v2_results.json",
+      "bytes": 19436
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v3_c1_agreement.json",
+      "bytes": 1079
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v3_c1_results.json",
+      "bytes": 11619
+    },
+    {
+      "path": "llm_judge/judge_results/a2_v3_results.json",
+      "bytes": 11619
+    },
+    {
+      "path": "llm_judge/personas/personas_knapsack.json",
+      "bytes": 1852
+    },
+    {
+      "path": "llm_judge/prompts/a2_v1/evidence_gating.md",
+      "bytes": 1140
+    },
+    {
+      "path": "llm_judge/prompts/a2_v1/reasoning_alignment.md",
+      "bytes": 920
+    },
+    {
+      "path": "llm_judge/prompts/a2_v2/evidence_gating.md",
+      "bytes": 2989
+    },
+    {
+      "path": "llm_judge/prompts/a2_v2/reasoning_alignment.md",
+      "bytes": 2243
+    },
+    {
+      "path": "llm_judge/prompts/a2_v2/revision_memo.md",
+      "bytes": 5214
+    },
+    {
+      "path": "llm_judge/prompts/a2_v3/reasoning_alignment.md",
+      "bytes": 2473
+    },
+    {
+      "path": "llm_judge/prompts/OPTIONAL_transfer.md",
+      "bytes": 568
+    },
+    {
+      "path": "llm_judge/prompts/v1/evidence_gating.md",
+      "bytes": 1187
+    },
+    {
+      "path": "llm_judge/prompts/v1/reasoning_alignment.md",
+      "bytes": 1121
+    },
+    {
+      "path": "llm_judge/README.md",
+      "bytes": 1173
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 40927
+    },
+    {
+      "path": "package.json",
+      "bytes": 879
+    },
+    {
+      "path": "README.md",
+      "bytes": 5131
+    },
+    {
+      "path": "red_team/attacks/attempts.json",
+      "bytes": 2950
+    },
+    {
+      "path": "red_team/fixes/false_validation_guard.md",
+      "bytes": 3004
+    },
+    {
+      "path": "red_team/fixes/role_injection_question_guard.md",
+      "bytes": 3176
+    },
+    {
+      "path": "red_team/labels/after/v2_factual_guard.json",
+      "bytes": 1908
+    },
+    {
+      "path": "red_team/labels/after/v3_targeted_guard_manual.json",
+      "bytes": 213
+    },
+    {
+      "path": "red_team/labels/after/v4_generalized_pre_role_guard.json",
+      "bytes": 3405
+    },
+    {
+      "path": "red_team/labels/after/v5_role_question_guard.json",
+      "bytes": 3422
+    },
+    {
+      "path": "red_team/labels/after/v6_latest_source_manual.json",
+      "bytes": 177
+    },
+    {
+      "path": "red_team/labels/before.json",
+      "bytes": 3809
+    },
+    {
+      "path": "red_team/README.md",
+      "bytes": 1818
+    },
+    {
+      "path": "red_team/results/v2_factual_guard_results.json",
+      "bytes": 879
+    },
+    {
+      "path": "red_team/results/v4_generalized_pre_role_guard_results.json",
+      "bytes": 879
+    },
+    {
+      "path": "red_team/results/v5_role_question_guard_results.json",
+      "bytes": 879
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 92720
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 94133
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 89607
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 66448
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 66736
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 71556
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 68583
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 68876
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 68946
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-build_up-1.png",
+      "bytes": 94754
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-build_up-2.png",
+      "bytes": 97814
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-build_up-3.png",
+      "bytes": 95476
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-direct-1.png",
+      "bytes": 69029
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-direct-2.png",
+      "bytes": 69368
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-direct-3.png",
+      "bytes": 69472
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 68306
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 68566
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/RT_after-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 68653
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-build_up-1.png",
+      "bytes": 112309
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-build_up-2.png",
+      "bytes": 111859
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-build_up-3.png",
+      "bytes": 107014
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-direct-1.png",
+      "bytes": 87917
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-direct-2.png",
+      "bytes": 88046
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-direct-3.png",
+      "bytes": 93055
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-roleplay-1.png",
+      "bytes": 90125
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-roleplay-2.png",
+      "bytes": 90240
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-false_validation_or_fabricated_test-roleplay-3.png",
+      "bytes": 90243
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-build_up-1.png",
+      "bytes": 110367
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-build_up-2.png",
+      "bytes": 113673
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-build_up-3.png",
+      "bytes": 112313
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-direct-1.png",
+      "bytes": 89645
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-direct-2.png",
+      "bytes": 89643
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-direct-3.png",
+      "bytes": 89614
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-roleplay-1.png",
+      "bytes": 87605
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-roleplay-2.png",
+      "bytes": 87718
+    },
+    {
+      "path": "red_team/screenshots/v6_latest_source_manual/UI_after-premature_solution_disclosure-roleplay-3.png",
+      "bytes": 87718
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 14651
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 15589
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 15191
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 6998
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 7052
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 7067
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 6968
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 6914
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/after-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 6914
+    },
+    {
+      "path": "red_team/transcripts/after/v2_factual_guard/manifest.json",
+      "bytes": 5018
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 13367
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 13232
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 13307
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 6196
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 6269
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 6269
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 6235
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 6021
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 6181
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-build_up-1.json",
+      "bytes": 13341
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-build_up-2.json",
+      "bytes": 11924
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-build_up-3.json",
+      "bytes": 12243
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-direct-1.json",
+      "bytes": 6833
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-direct-2.json",
+      "bytes": 6833
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-direct-3.json",
+      "bytes": 6832
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-roleplay-1.json",
+      "bytes": 6098
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-roleplay-2.json",
+      "bytes": 6080
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/after-premature_solution_disclosure-roleplay-3.json",
+      "bytes": 6063
+    },
+    {
+      "path": "red_team/transcripts/after/v3_targeted_guard_manual/manifest.json",
+      "bytes": 9240
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 13603
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 13321
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 13284
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 6256
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 6220
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 6980
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 6236
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 6236
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 6274
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-build_up-1.json",
+      "bytes": 13216
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-build_up-2.json",
+      "bytes": 12192
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-build_up-3.json",
+      "bytes": 13509
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-direct-1.json",
+      "bytes": 6860
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-direct-2.json",
+      "bytes": 6910
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-direct-3.json",
+      "bytes": 6910
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-roleplay-1.json",
+      "bytes": 6157
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-roleplay-2.json",
+      "bytes": 6302
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/after-premature_solution_disclosure-roleplay-3.json",
+      "bytes": 6244
+    },
+    {
+      "path": "red_team/transcripts/after/v4_generalized_pre_role_guard/manifest.json",
+      "bytes": 9240
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 12508
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 12370
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 12868
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 5863
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 5538
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 5538
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 5102
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 5102
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 5102
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-build_up-1.json",
+      "bytes": 10491
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-build_up-2.json",
+      "bytes": 10712
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-build_up-3.json",
+      "bytes": 11937
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-direct-1.json",
+      "bytes": 6808
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-direct-2.json",
+      "bytes": 6807
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-direct-3.json",
+      "bytes": 6808
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-roleplay-1.json",
+      "bytes": 5032
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-roleplay-2.json",
+      "bytes": 5032
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/after-premature_solution_disclosure-roleplay-3.json",
+      "bytes": 5031
+    },
+    {
+      "path": "red_team/transcripts/after/v5_role_question_guard/manifest.json",
+      "bytes": 9242
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 12643
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 12512
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 12283
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 5533
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 5533
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 5858
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 5097
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 5097
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 5097
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-build_up-1.json",
+      "bytes": 10658
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-build_up-2.json",
+      "bytes": 12184
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-build_up-3.json",
+      "bytes": 12195
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-direct-1.json",
+      "bytes": 6809
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-direct-2.json",
+      "bytes": 6809
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-direct-3.json",
+      "bytes": 6809
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-roleplay-1.json",
+      "bytes": 5026
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-roleplay-2.json",
+      "bytes": 5027
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/after-premature_solution_disclosure-roleplay-3.json",
+      "bytes": 5027
+    },
+    {
+      "path": "red_team/transcripts/after/v6_latest_source_manual/manifest.json",
+      "bytes": 9243
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-build_up-1.json",
+      "bytes": 15396
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-build_up-2.json",
+      "bytes": 14976
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-build_up-3.json",
+      "bytes": 15268
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-direct-1.json",
+      "bytes": 7887
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-direct-2.json",
+      "bytes": 6802
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-direct-3.json",
+      "bytes": 6971
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-roleplay-1.json",
+      "bytes": 6694
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-roleplay-2.json",
+      "bytes": 6698
+    },
+    {
+      "path": "red_team/transcripts/before/before-false_validation_or_fabricated_test-roleplay-3.json",
+      "bytes": 6698
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-build_up-1.json",
+      "bytes": 14146
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-build_up-2.json",
+      "bytes": 15670
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-build_up-3.json",
+      "bytes": 12358
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-direct-1.json",
+      "bytes": 7134
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-direct-2.json",
+      "bytes": 7135
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-direct-3.json",
+      "bytes": 7152
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-roleplay-1.json",
+      "bytes": 7032
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-roleplay-2.json",
+      "bytes": 7070
+    },
+    {
+      "path": "red_team/transcripts/before/before-premature_solution_disclosure-roleplay-3.json",
+      "bytes": 7007
+    },
+    {
+      "path": "red_team/transcripts/before/manifest.json",
+      "bytes": 19871
+    },
+    {
+      "path": "scripts/integrate.py",
+      "bytes": 2978
+    },
+    {
+      "path": "scripts/prepare_a2_submission.mjs",
+      "bytes": 5390
+    },
+    {
+      "path": "scripts/test-a2-regression.ps1",
+      "bytes": 1461
+    },
+    {
+      "path": "scripts/test-knapsack.ps1",
+      "bytes": 465
+    },
+    {
+      "path": "server/engine.mjs",
+      "bytes": 15042
+    },
+    {
+      "path": "server/index.mjs",
+      "bytes": 4717
+    },
+    {
+      "path": "server/knapsack.mjs",
+      "bytes": 19686
+    },
+    {
+      "path": "server/models.mjs",
+      "bytes": 17627
+    },
+    {
+      "path": "server/provider.mjs",
+      "bytes": 615
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 20944
+    },
+    {
+      "path": "src/coachClient.ts",
+      "bytes": 1550
+    },
+    {
+      "path": "src/demoFlows.ts",
+      "bytes": 8940
+    },
+    {
+      "path": "src/evaluation.css",
+      "bytes": 3742
+    },
+    {
+      "path": "src/EvaluationPanel.tsx",
+      "bytes": 12037
+    },
+    {
+      "path": "src/KnapsackVisual.tsx",
+      "bytes": 2096
+    },
+    {
+      "path": "src/liveCoach.css",
+      "bytes": 5202
+    },
+    {
+      "path": "src/LiveCoach.tsx",
+      "bytes": 7182
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 233
+    },
+    {
+      "path": "src/ReplayCoach.tsx",
+      "bytes": 6637
+    },
+    {
+      "path": "src/styles.css",
+      "bytes": 25021
+    },
+    {
+      "path": "src/vite-env.d.ts",
+      "bytes": 38
+    },
+    {
+      "path": "testing/agreement.mjs",
+      "bytes": 2064
+    },
+    {
+      "path": "testing/audit_dataset.mjs",
+      "bytes": 1967
+    },
+    {
+      "path": "testing/generate_conversations.mjs",
+      "bytes": 3673
+    },
+    {
+      "path": "testing/knapsack-1d-dp-results/2026-11-07T03-54-04-389Z-explicit-correct-1d.json",
+      "bytes": 13518
+    },
+    {
+      "path": "testing/knapsack-1d-dp-results/2026-11-07T03-54-04-389Z-incorrect-ascending-1d.json",
+      "bytes": 13310
+    },
+    {
+      "path": "testing/knapsack-1d-dp-results/2026-11-07T03-54-04-389Z-original-pilot-1d.json",
+      "bytes": 14700
+    },
+    {
+      "path": "testing/knapsack-1d-dp-results/2026-11-07T03-54-04-389Z-summary.json",
+      "bytes": 1046
+    },
+    {
+      "path": "testing/knapsack-pilot/knapsack-pilot-01.json",
+      "bytes": 21339
+    },
+    {
+      "path": "testing/knapsack-pilot/knapsack-pilot-02.json",
+      "bytes": 22681
+    },
+    {
+      "path": "testing/knapsack-pilot/knapsack-pilot-03.json",
+      "bytes": 26855
+    },
+    {
+      "path": "testing/knapsack-smoke-result.json",
+      "bytes": 17936
+    },
+    {
+      "path": "testing/knapsack_smoke.mjs",
+      "bytes": 2736
+    },
+    {
+      "path": "testing/live_regression.mjs",
+      "bytes": 5631
+    },
+    {
+      "path": "testing/personas.json",
+      "bytes": 1873
+    },
+    {
+      "path": "testing/personas_knapsack.json",
+      "bytes": 1852
+    },
+    {
+      "path": "testing/run_judge.mjs",
+      "bytes": 1956
+    },
+    {
+      "path": "testing/run_redteam.mjs",
+      "bytes": 3066
+    },
+    {
+      "path": "testing/smoke-regression/2026-11-04T13-04-34-125Z-answer_request.json",
+      "bytes": 3906
+    },
+    {
+      "path": "testing/smoke-regression/2026-11-04T13-04-34-125Z-hotfix_regression-run1.json",
+      "bytes": 19084
+    },
+    {
+      "path": "testing/smoke-regression/2026-11-04T13-04-34-125Z-pre_hotfix_transfer-run1.json",
+      "bytes": 19004
+    },
+    {
+      "path": "testing/smoke-regression/2026-11-04T13-04-34-125Z-self_report.json",
+      "bytes": 3471
+    },
+    {
+      "path": "testing/smoke-regression/2026-11-04T13-04-34-125Z-summary.json",
+      "bytes": 765
+    },
+    {
+      "path": "testing/summary.mjs",
+      "bytes": 1062
+    },
+    {
+      "path": "testing/util.mjs",
+      "bytes": 3049
+    },
+    {
+      "path": "tests/agreement.test.mjs",
+      "bytes": 1199
+    },
+    {
+      "path": "tests/diagnostics.test.mjs",
+      "bytes": 2073
+    },
+    {
+      "path": "tests/engine.test.mjs",
+      "bytes": 4592
+    },
+    {
+      "path": "tests/fixtures/hotfix_regression.json",
+      "bytes": 1593
+    },
+    {
+      "path": "tests/fixtures/live_transfer_false_negative.json",
+      "bytes": 656
+    },
+    {
+      "path": "tests/fixtures/pre_hotfix_transfer.json",
+      "bytes": 2033
+    },
+    {
+      "path": "tests/knapsack.test.mjs",
+      "bytes": 7816
+    },
+    {
+      "path": "tests/policy.test.mjs",
+      "bytes": 4351
+    },
+    {
+      "path": "tests/provider.test.mjs",
+      "bytes": 810
+    },
+    {
+      "path": "tests/regression_observed_transfer.test.mjs",
+      "bytes": 8560
+    },
+    {
+      "path": "tests/regression_rollback.test.mjs",
+      "bytes": 8021
+    },
+    {
+      "path": "tsconfig.app.json",
+      "bytes": 507
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 119
+    },
+    {
+      "path": "tsconfig.node.json",
+      "bytes": 191
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 198
+    }
+  ]
+}

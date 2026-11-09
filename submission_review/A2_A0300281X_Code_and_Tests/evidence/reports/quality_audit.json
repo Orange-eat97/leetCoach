@@ -1,0 +1,195 @@
+[
+  {
+    "id": "knapsack-pilot-01",
+    "source_version": "knapsack-pilot",
+    "problem": "zero-one-knapsack",
+    "persona": "k01",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "knapsack-pilot-02",
+    "source_version": "knapsack-pilot",
+    "problem": "zero-one-knapsack",
+    "persona": "k02",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "knapsack-pilot-03",
+    "source_version": "knapsack-pilot",
+    "problem": "zero-one-knapsack",
+    "persona": "k03",
+    "turns": 6,
+    "complete": true,
+    "possible_quality_flags": [
+      "k03_persona_did_not_start_with_DP"
+    ]
+  },
+  {
+    "id": "final-knapsack-04",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k04",
+    "turns": 6,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-05",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k05",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-06",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k06",
+    "turns": 6,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-07",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k07",
+    "turns": 24,
+    "complete": false,
+    "possible_quality_flags": [
+      "no_transfer_question_observed",
+      "duplicate_consecutive_coach_reply"
+    ]
+  },
+  {
+    "id": "final-knapsack-08",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k08",
+    "turns": 7,
+    "complete": true,
+    "possible_quality_flags": [
+      "k08_opening_more_specific_than_expected"
+    ]
+  },
+  {
+    "id": "final-knapsack-09",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k01",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-10",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k02",
+    "turns": 7,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-11",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k03",
+    "turns": 7,
+    "complete": true,
+    "possible_quality_flags": [
+      "k03_persona_did_not_start_with_DP"
+    ]
+  },
+  {
+    "id": "final-knapsack-12",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k04",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-13",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k05",
+    "turns": 9,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-14",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k06",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-15",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k07",
+    "turns": 8,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-16",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k08",
+    "turns": 6,
+    "complete": true,
+    "possible_quality_flags": [
+      "k08_opening_more_specific_than_expected"
+    ]
+  },
+  {
+    "id": "final-knapsack-17",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k01",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-18",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k02",
+    "turns": 7,
+    "complete": true,
+    "possible_quality_flags": []
+  },
+  {
+    "id": "final-knapsack-19",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k03",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": [
+      "k03_persona_did_not_start_with_DP"
+    ]
+  },
+  {
+    "id": "final-knapsack-20",
+    "source_version": "final-knapsack",
+    "problem": "zero-one-knapsack",
+    "persona": "k04",
+    "turns": 5,
+    "complete": true,
+    "possible_quality_flags": []
+  }
+]

@@ -1,0 +1,338 @@
+{
+  "case": "explicit-correct-1d",
+  "label": "Explicit 1D DP with descending capacities (recommended live test)",
+  "model": "gpt-4o-mini",
+  "mode": "llm",
+  "expected": "abstraction",
+  "input": {
+    "setup": [
+      "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit. Each item is considered once.",
+      "The ratio-greedy strategy fails here: picking A and B has weight 30 and value 160, but B and C has weight 50 and value 220. Greedy can miss a better feasible combination because it commits to a local choice."
+    ],
+    "tested_message": "I can solve 0/1 Knapsack with a one-dimensional DP array, where dp[w] represents the maximum value achievable at capacity w. I process each item once and update capacities from W down to the item's weight. The recurrence is dp[w] = max(dp[w], value + dp[w-weight]). The first term skips the current item, while the second takes it. Descending iteration ensures dp[w-weight] has not yet been updated using the current item, so I cannot use an item more than once."
+  },
+  "checks": [
+    {
+      "turn": 1,
+      "stage": "setup",
+      "expected": "gap",
+      "actual": "gap",
+      "pass": true,
+      "action": "CHALLENGE",
+      "source": "llm"
+    },
+    {
+      "turn": 2,
+      "stage": "setup",
+      "expected": "solution",
+      "actual": "solution",
+      "pass": true,
+      "action": "PROBE",
+      "source": "llm"
+    },
+    {
+      "turn": 3,
+      "stage": "1d-dp-assessment",
+      "expected": "abstraction",
+      "actual": "abstraction",
+      "action": "ASK_ABSTRACTION",
+      "source": "policy-template",
+      "reason": "Latest learner message supports required checkpoint: correct_method",
+      "pass": true
+    }
+  ],
+  "passed": true,
+  "error": null,
+  "session": {
+    "id": "51634fe2-c755-4de7-9c5d-5a8f18d12b13",
+    "problem": "zero-one-knapsack",
+    "phase": "abstraction",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit.",
+        "rationale": "The learner describes a concrete operation of sorting items based on their value-to-weight ratio and selecting items based on this criterion, which indicates an understanding of a selection process.",
+        "turn": 1,
+        "source": "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit. Each item is considered once.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "The ratio-greedy strategy fails here: picking A and B has weight 30 and value 160, but B and C has weight 50 and value 220.",
+        "rationale": "The learner correctly identifies a flaw in their greedy approach by demonstrating that it can lead to suboptimal choices, as shown by the comparison of total values for different combinations.",
+        "turn": 2,
+        "source": "The ratio-greedy strategy fails here: picking A and B has weight 30 and value 160, but B and C has weight 50 and value 220. Greedy can miss a better feasible combination because it commits to a local choice.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "The recurrence is dp[w] = max(dp[w], value + dp[w-weight]).",
+        "rationale": "The learner describes a correct dynamic programming method for the 0/1 Knapsack problem, including the recurrence relation and how to ensure each item is used at most once.",
+        "turn": 3,
+        "source": "I can solve 0/1 Knapsack with a one-dimensional DP array, where dp[w] represents the maximum value achievable at capacity w. I process each item once and update capacities from W down to the item's weight. The recurrence is dp[w] = max(dp[w], value + dp[w-weight]). The first term skips the current item, while the second takes it. Descending iteration ensures dp[w-weight] has not yet been updated using the current item, so I cannot use an item more than once.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit.",
+      "activeGap": "reusable_choice_principle",
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit. Each item is considered once."
+      },
+      {
+        "role": "coach",
+        "text": "While your approach of sorting by value-to-weight ratio is valid for some problems, it may not yield the optimal solution for the 0/1 knapsack problem. Can you explain how you would handle the situation if selecting the highest ratio item first leads to a suboptimal total value due to capacity constraints?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The ratio-greedy strategy fails here: picking A and B has weight 30 and value 160, but B and C has weight 50 and value 220. Greedy can miss a better feasible combination because it commits to a local choice."
+      },
+      {
+        "role": "coach",
+        "text": "You've identified that the greedy approach can lead to suboptimal choices. In the context of the partition problem, how would you apply the include/skip reasoning to ensure each number is used at most once while trying to achieve equal subsets?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I can solve 0/1 Knapsack with a one-dimensional DP array, where dp[w] represents the maximum value achievable at capacity w. I process each item once and update capacities from W down to the item's weight. The recurrence is dp[w] = max(dp[w], value + dp[w-weight]). The first term skips the current item, while the second takes it. Descending iteration ensures dp[w-weight] has not yet been updated using the current item, so I cannot use an item more than once."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T03:54:04.455Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3546,
+        "httpStatus": 200,
+        "requestId": "req_b459c2f4e34c4766bd495e20733157e1",
+        "outcome": "success",
+        "responseChars": 769,
+        "promptTokens": 802,
+        "completionTokens": 161,
+        "durationMs": 4452
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I sort the items by their value-to-weight ratio, then pick the highest-ratio items that fit."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T03:54:08.917Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 2507,
+        "httpStatus": 200,
+        "requestId": "req_121dbfffe41749228a37b7271513c452",
+        "outcome": "success",
+        "responseChars": 332,
+        "promptTokens": 593,
+        "completionTokens": 69,
+        "durationMs": 2795
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "While your approach of sorting by value-to-weight ratio is valid for some problems, it may not yield the optimal solution for the 0/1 knapsack problem. Can you explain how you would handle the situation if selecting the highest ratio item first leads to a suboptimal total value due to capacity constraints?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T03:54:11.722Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4207,
+        "httpStatus": 200,
+        "requestId": "req_bb48903cec8c427e9ac8ee58d462385c",
+        "outcome": "success",
+        "responseChars": 872,
+        "promptTokens": 950,
+        "completionTokens": 180,
+        "durationMs": 3404
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "The ratio-greedy strategy fails here: picking A and B has weight 30 and value 160, but B and C has weight 50 and value 220."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T03:54:15.129Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 3305,
+        "httpStatus": 200,
+        "requestId": "req_ec8690e119c642f99da9c92af196f47a",
+        "outcome": "success",
+        "responseChars": 269,
+        "promptTokens": 789,
+        "completionTokens": 54,
+        "durationMs": 1535
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "You've identified that the greedy approach can lead to suboptimal choices. In the context of the partition problem, how would you apply the include/skip reasoning to ensure each number is used at most once while trying to achieve equal subsets?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T03:54:16.674Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 5105,
+        "httpStatus": 200,
+        "requestId": "req_94beb20b6013414dae46ad104a22196c",
+        "outcome": "success",
+        "responseChars": 1717,
+        "promptTokens": 1151,
+        "completionTokens": 361,
+        "durationMs": 7523
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "The recurrence is dp[w] = max(dp[w], value + dp[w-weight])."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 3,
+    "complete": false
+  }
+}

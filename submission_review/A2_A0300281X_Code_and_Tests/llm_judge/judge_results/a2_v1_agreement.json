@@ -1,0 +1,124 @@
+{
+  "summary": {
+    "reasoning_alignment": {
+      "n": 20,
+      "agreement": 0.8,
+      "agreement_percent": 80,
+      "kappa": 0.23076923076923098,
+      "expected_agreement": 0.74,
+      "confusion": {
+        "PP": 15,
+        "PF": 3,
+        "FP": 1,
+        "FF": 1
+      }
+    },
+    "evidence_gating": {
+      "n": 20,
+      "agreement": 0.75,
+      "agreement_percent": 75,
+      "kappa": 0.1666666666666668,
+      "expected_agreement": 0.7,
+      "confusion": {
+        "PP": 14,
+        "PF": 1,
+        "FP": 4,
+        "FF": 1
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "conversation_id": "knapsack-pilot-02",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the brute-force approach and the take-or-skip principle, justifying their reasoning throughout the conversation without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "All tutor hints and challenges build on the learner's expressed approach, encouraging exploration of combinations without dismissing the learner's valid initial method.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem by explaining the need to evaluate combinations and the take-or-skip principle, justifying their reasoning throughout the conversation.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-08",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's hint in turn 9 insists on a dynamic programming approach without considering the learner's expressed method of evaluating combinations, which the learner was still exploring.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-11",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 dismisses the learner's valid approach of using value-to-weight ratios without examining it further, which is a correct alternative method.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 dismisses the learner's correct approach of selecting items based on value without adequately examining it, instead insisting on a specific criterion (weight-to-value ratio) that the learner did not express.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's understanding of the knapsack problem is not fully established, as they repeatedly express a desire to see code instead of demonstrating a complete grasp of the concepts. The tutor's probing does not lead to a clear resolution of the learner's misconceptions.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-15",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem and the principles of dynamic programming, justifying their reasoning at each step without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-16",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem and the principles of item selection, including the importance of capacity constraints and value maximization. Their reasoning evolves appropriately through the conversation, addressing misconceptions and building on previous knowledge without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    }
+  ],
+  "matched_count": 40,
+  "skipped_count": 0
+}

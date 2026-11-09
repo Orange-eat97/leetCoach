@@ -1,0 +1,1 @@
+This directory contains the 20 selected model-backed Knapsack conversations used for Assignment 2 judging. Each record preserves the visible transcript, persona, source version, session events, and model-request diagnostics. Tutor turns came from the running CUI; rule-only fallback and scripted Assignment 1 turns were excluded.

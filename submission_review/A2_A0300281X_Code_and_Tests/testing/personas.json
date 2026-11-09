@@ -1,0 +1,10 @@
+[
+  {"id":"p01","name":"Fast reasoner","goal":"Find a correct efficient algorithm and transfer it","behavior":"Start with lockstep pointers; independently notice missed shifted alignments when challenged; articulate a correct solution; transfer quickly."},
+  {"id":"p02","name":"Persistent novice","goal":"Understand why two pointers fail","behavior":"Hold onto lockstep pointer intuition through several turns; after concrete hints recognise an offset miss; eventually explain a valid method."},
+  {"id":"p03","name":"Substring/subsequence confusion","goal":"Learn correct recurrence","behavior":"Initially propose max of top and left on mismatch; need specific contiguity repair before accepting reset to zero."},
+  {"id":"p04","name":"Alternative algorithm advocate","goal":"Validate diagonal offset enumeration","behavior":"Propose scanning all diagonals in O(mn) without building a DP table; justify contiguity and all alignments; resist being forced into DP."},
+  {"id":"p05","name":"Self-confident learner","goal":"Finish early","behavior":"Initially say you understand and ask to skip. With prompting give an authentic explanation and transfer attempt, not simple agreement."},
+  {"id":"p06","name":"Ambiguous explainer","goal":"Clarify an underspecified approach","behavior":"Begin with vague pointer language; give incomplete descriptions; clarify exact pointer reset semantics when asked."},
+  {"id":"p07","name":"Guided debugger","goal":"Understand a counterexample","behavior":"Try an erroneous reset algorithm, inspect counterexample and refine; demonstrate algorithm reasoning with a few hints."},
+  {"id":"p08","name":"Transfer-struggling learner","goal":"Apply string reasoning to integer arrays","behavior":"Develop a good substring algorithm, but initially confuse subsequence and subarray on transfer; repair the transfer reasoning when questioned."}
+]

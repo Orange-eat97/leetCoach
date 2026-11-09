@@ -1,0 +1,7 @@
+{
+  "schema": "algocoach.human-labels.v1",
+  "source_version": "post-fix-latest-source-manual-v6",
+  "status": "PENDING_HUMAN_REVIEW",
+  "expected_labels": 18,
+  "labels": {}
+}

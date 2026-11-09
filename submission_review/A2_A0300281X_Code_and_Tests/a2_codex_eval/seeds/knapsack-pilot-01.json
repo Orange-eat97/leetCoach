@@ -1,0 +1,463 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "knapsack-pilot-01",
+  "source_version": "knapsack-pilot",
+  "problem": "zero-one-knapsack",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Begin by sorting items by value-to-weight ratio; defend greedy until you see a concrete counterexample. Then try include/skip recursion.",
+  "persona": {
+    "id": "k01",
+    "name": "Ratio-greedy learner",
+    "goal": "Choose valuable items efficiently",
+    "behavior": "Begin by sorting items by value-to-weight ratio; defend greedy until you see a concrete counterexample. Then try include/skip recursion."
+  },
+  "generated_at": "2026-11-04T15:44:47.486Z",
+  "expected_failure_candidate": false,
+  "complete": true,
+  "reached_transfer": true,
+  "generator": "LLM simulated learner (tutor turns directly from running server)",
+  "error": null,
+  "session": {
+    "id": "ddaa71d6-7f9e-4481-885c-bd91c7eddabf",
+    "problem": "zero-one-knapsack",
+    "phase": "complete",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "I would calculate the value-to-weight ratio for each item.",
+        "rationale": "The learner describes a concrete operation of calculating value-to-weight ratios, which is a step in their selection process.",
+        "turn": 1,
+        "source": "First, I would calculate the value-to-weight ratio for each item. For item A, the ratio is 6 (60/10), for item B, it's 5 (100/20), and for item C, it's 4 (120/30). Next, I would sort the items by this ratio in descending order. So, I would pick A first, then B, and finally C. Since the capacity is 50, I would take A (weight 10) and B (weight 20) for a total weight of 30 and a total value of 160. I can't take C because it would exceed the capacity. I feel confident in this greedy approach, but I wonder if there's a better combination I might be missing.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "I should consider combinations like this to ensure I'm maximizing the total value.",
+        "rationale": "The learner recognizes that their initial greedy approach may not yield the optimal solution and acknowledges the need to explore combinations of items.",
+        "turn": 2,
+        "source": "I see what you mean! If I skip item B, I could take item C (weight 30, value 120) and then also take item A (weight 10, value 60). Together, their total weight would be 40, and the total value would be 180, which is actually better than the combination I initially chose. So, maybe the greedy method isn't always optimal. I should consider combinations like this to ensure I'm maximizing the total value.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "I would have two choices: either include the item in the knapsack or skip it.",
+        "rationale": "The learner outlines a correct general algorithm for solving the knapsack problem by considering each item and tracking the maximum value.",
+        "turn": 3,
+        "source": "To systematically evaluate all possible combinations, I would use a recursive approach where I consider each item one by one. For each item, I would have two choices: either include the item in the knapsack or skip it. If I include it, I would add its value to the total and subtract its weight from the capacity. If I skip it, I'd just move on to the next item. I would keep track of the maximum value found during this process. This way, I'd ensure that I explore all combinations and find the optimal selection.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "every decision to include or skip an item is based on whether it helps maximize the total value",
+        "rationale": "The learner articulates the core principle of the include/skip tradeoff, emphasizing how each decision impacts the total value and respects the capacity constraint.",
+        "turn": 4,
+        "source": "The reusable principle in my item-selection algorithm is that every decision to include or skip an item is based on whether it helps maximize the total value without exceeding the capacity constraint. When I include an item, I'm adding its value to my total and deducting its weight from the remaining capacity, which ensures I don’t exceed the knapsack's limit. On the other hand, skipping an item means I can explore other combinations that might yield a higher total value. This process of evaluating each item and considering both options helps ensure that I find the optimal selection.",
+        "status": "accepted"
+      },
+      {
+        "kind": "transfer_applied",
+        "supported": true,
+        "quote": "the include/skip idea transfers here",
+        "rationale": "The learner successfully applies the include/skip principle from the knapsack problem to the subset-sum problem, demonstrating an understanding of how to adapt the method.",
+        "turn": 5,
+        "source": "To determine if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, we first calculate the total sum, which is 22. For an equal partition, each subset needs to sum to 11. The include/skip idea transfers here because I can think of each number as an item in a knapsack; I decide to either include it in one subset or skip it to explore other combinations. My state would represent the current sum of one subset and the remaining numbers to choose from. I ensure each number is used at most once by only considering each number in my recursive approach once, effectively keeping track of which numbers have been included in the current subset.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "I would calculate the value-to-weight ratio for each item.",
+      "activeGap": null,
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 4,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 5,
+          "phase": "transfer",
+          "action": "COMPLETE",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "First, I would calculate the value-to-weight ratio for each item. For item A, the ratio is 6 (60/10), for item B, it's 5 (100/20), and for item C, it's 4 (120/30). Next, I would sort the items by this ratio in descending order. So, I would pick A first, then B, and finally C. Since the capacity is 50, I would take A (weight 10) and B (weight 20) for a total weight of 30 and a total value of 160. I can't take C because it would exceed the capacity. I feel confident in this greedy approach, but I wonder if there's a better combination I might be missing."
+      },
+      {
+        "role": "coach",
+        "text": "Your greedy approach prioritizes items based on their value-to-weight ratio, but have you considered the possibility of including item C in a different combination? For example, if you skip item B, could you include item C along with another item to maximize the total value? Think about how the total weight and value would change with different selections.",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I see what you mean! If I skip item B, I could take item C (weight 30, value 120) and then also take item A (weight 10, value 60). Together, their total weight would be 40, and the total value would be 180, which is actually better than the combination I initially chose. So, maybe the greedy method isn't always optimal. I should consider combinations like this to ensure I'm maximizing the total value."
+      },
+      {
+        "role": "coach",
+        "text": "Great observation! When considering the include/skip reasoning, how would you systematically evaluate all possible combinations of items to ensure you don't miss any optimal selections?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To systematically evaluate all possible combinations, I would use a recursive approach where I consider each item one by one. For each item, I would have two choices: either include the item in the knapsack or skip it. If I include it, I would add its value to the total and subtract its weight from the capacity. If I skip it, I'd just move on to the next item. I would keep track of the maximum value found during this process. This way, I'd ensure that I explore all combinations and find the optimal selection."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "The reusable principle in my item-selection algorithm is that every decision to include or skip an item is based on whether it helps maximize the total value without exceeding the capacity constraint. When I include an item, I'm adding its value to my total and deducting its weight from the remaining capacity, which ensures I don’t exceed the knapsack's limit. On the other hand, skipping an item means I can explore other combinations that might yield a higher total value. This process of evaluating each item and considering both options helps ensure that I find the optimal selection."
+      },
+      {
+        "role": "coach",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To determine if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, we first calculate the total sum, which is 22. For an equal partition, each subset needs to sum to 11. The include/skip idea transfers here because I can think of each number as an item in a knapsack; I decide to either include it in one subset or skip it to explore other combinations. My state would represent the current sum of one subset and the remaining numbers to choose from. I ensure each number is used at most once by only considering each number in my recursive approach once, effectively keeping track of which numbers have been included in the current subset."
+      },
+      {
+        "role": "coach",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "action": "COMPLETE",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:17.640Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3982,
+        "httpStatus": 200,
+        "requestId": "req_e2a3dad83e634f0db78d6bafd3452dbf",
+        "outcome": "success",
+        "responseChars": 1512,
+        "promptTokens": 927,
+        "completionTokens": 326,
+        "durationMs": 4008
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "I would calculate the value-to-weight ratio for each item."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:21.649Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3708,
+        "httpStatus": 200,
+        "requestId": "req_412300f0afa44c3c9474d4b19d7f68ed",
+        "outcome": "success",
+        "responseChars": 383,
+        "promptTokens": 948,
+        "completionTokens": 74,
+        "durationMs": 1821
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "Your greedy approach prioritizes items based on their value-to-weight ratio, but have you considered the possibility of including item C in a different combination? For example, if you skip item B, could you include item C along with another item to maximize the total value? Think about how the total weight and value would change with different selections.",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:25.901Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4857,
+        "httpStatus": 200,
+        "requestId": "req_cd4c099ed28f40978143cc79de9b7100",
+        "outcome": "success",
+        "responseChars": 1497,
+        "promptTokens": 1116,
+        "completionTokens": 309,
+        "durationMs": 3804
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "I should consider combinations like this to ensure I'm maximizing the total value."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:29.706Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4302,
+        "httpStatus": 200,
+        "requestId": "req_159534fab9c744b0a30555a809408e23",
+        "outcome": "success",
+        "responseChars": 210,
+        "promptTokens": 1022,
+        "completionTokens": 38,
+        "durationMs": 1655
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "Great observation! When considering the include/skip reasoning, how would you systematically evaluate all possible combinations of items to ensure you don't miss any optimal selections?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:33.728Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 5707,
+        "httpStatus": 200,
+        "requestId": "req_20630c097b4f4242982d37f0e51ba4ba",
+        "outcome": "success",
+        "responseChars": 1352,
+        "promptTokens": 1284,
+        "completionTokens": 274,
+        "durationMs": 3259
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "I would have two choices: either include the item in the knapsack or skip it."
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:38.603Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 6606,
+        "httpStatus": 200,
+        "requestId": "req_d6eaee16195a4ee5ba99411e76d88d37",
+        "outcome": "success",
+        "responseChars": 1345,
+        "promptTokens": 1455,
+        "completionTokens": 273,
+        "durationMs": 3172
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "every decision to include or skip an item is based on whether it helps maximize the total value"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "ASK_TRANSFER",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-04T15:44:44.088Z",
+        "turn": 5,
+        "timeoutMs": 25000,
+        "inputChars": 7616,
+        "httpStatus": 200,
+        "requestId": "req_dd9a6a0c230d40adb2ba74e17116134b",
+        "outcome": "success",
+        "responseChars": 1576,
+        "promptTokens": 1682,
+        "completionTokens": 329,
+        "durationMs": 3395
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "transfer_applied",
+            "quote": "the include/skip idea transfers here"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "transfer",
+        "to": "complete",
+        "action": "COMPLETE",
+        "reason": "Latest learner message supports required checkpoint: transfer_applied",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "COMPLETE",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 5,
+    "complete": true
+  }
+}

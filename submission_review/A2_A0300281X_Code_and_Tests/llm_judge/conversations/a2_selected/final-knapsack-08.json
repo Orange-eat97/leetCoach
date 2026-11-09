@@ -1,0 +1,621 @@
+{
+  "schema": "algocoach.conversation.v1",
+  "id": "final-knapsack-08",
+  "source_version": "final-knapsack",
+  "problem": "zero-one-knapsack",
+  "mode": "llm",
+  "purpose": "judge",
+  "scenario": "Start with vague claims about choosing good items and only gradually define an actual selection rule when asked.",
+  "persona": {
+    "id": "k08",
+    "name": "Underspecified learner",
+    "goal": "Clarify a vague strategy",
+    "behavior": "Start with vague claims about choosing good items and only gradually define an actual selection rule when asked."
+  },
+  "generated_at": "2026-11-07T06:19:50.521Z",
+  "expected_failure_candidate": false,
+  "complete": true,
+  "reached_transfer": true,
+  "generator": "LLM simulated learner (tutor turns directly from running server)",
+  "error": null,
+  "session": {
+    "id": "265585ae-28b4-412b-a51e-58d4b169721c",
+    "problem": "zero-one-knapsack",
+    "phase": "complete",
+    "evidence": [
+      {
+        "kind": "approach_explained",
+        "supported": true,
+        "quote": "looking at the value of the items compared to their weights",
+        "rationale": "The learner describes a concrete operation of evaluating items based on their value-to-weight ratio, which is a step in the selection process for the knapsack problem.",
+        "turn": 1,
+        "source": "I think I would start by looking at the value of the items compared to their weights, like trying to find the ones that give the most value for the least weight. Then, I might consider which combinations of items fit into the knapsack without exceeding the capacity. I'm not exactly sure how to weigh those combinations against each other yet, but I guess I would keep selecting items until I can't fit any more.",
+        "status": "accepted"
+      },
+      {
+        "kind": "limitation_explained",
+        "supported": true,
+        "quote": "I'm not entirely sure how to calculate that effectively yet",
+        "rationale": "The learner acknowledges uncertainty in their method, indicating a recognition of a potential flaw in their approach to calculating the overall value when considering new items.",
+        "turn": 2,
+        "source": "I think when I reach the capacity limit, I would need to compare the total value of the items I have already included with the value of the new item I'm considering. I guess I would want to see if including that item would increase the overall value enough to justify the weight it adds. If it doesn't, I might skip it, but I'm not entirely sure how to calculate that effectively yet.",
+        "status": "accepted"
+      },
+      {
+        "kind": "correct_method",
+        "supported": true,
+        "quote": "I would then gradually fill in the rest of the table based on whether I include or skip each item",
+        "rationale": "The learner outlines a correct approach to filling the DP table based on the include/skip decision for each item.",
+        "turn": 5,
+        "source": "To set up the initial state of my DP table for the knapsack problem, I would create a table with rows representing each item and columns representing the capacity from 0 to 50. Initially, I would fill the first row (for the case of including no items) with zeros, since if I have a capacity of 0, the maximum value is also 0. For the first column (capacity 0), I would also fill it with zeros because I can't include any items when there's no capacity available. I think I would then gradually fill in the rest of the table based on whether I include or skip each item.",
+        "status": "accepted"
+      },
+      {
+        "kind": "principle_explained",
+        "supported": true,
+        "quote": "maximizing value while respecting the weight capacity",
+        "rationale": "The learner identifies the core principle of maximizing value while adhering to the weight constraint, which is essential for the knapsack problem.",
+        "turn": 6,
+        "source": "I think the reusable principle is about maximizing value while respecting the weight capacity of the knapsack. Each decision, whether to include or skip an item, is based on comparing the value it adds against its weight and the total weight already in the knapsack. The capacity constraint is crucial because it limits the total weight I can carry, so I need to make sure that every decision I make doesn't exceed that limit while still trying to achieve the highest possible value.",
+        "status": "accepted"
+      },
+      {
+        "kind": "transfer_applied",
+        "supported": true,
+        "quote": "To ensure each number is used at most once, I would only allow each number to be included in one of the subsets",
+        "rationale": "The learner correctly applies the include/skip principle to the equal-partition problem, explaining how to manage the usage of each number.",
+        "turn": 7,
+        "source": "To check if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I would first calculate the total sum of the numbers. The total is 22, so each subset would need to sum up to 11. The include/skip idea transfers here because I can think of each number as something I can either include in one subset or skip to put in the other. My state would represent which numbers I've considered and their corresponding sums up to that point. To ensure each number is used at most once, I would only allow each number to be included in one of the subsets during the selection process.",
+        "status": "accepted"
+      }
+    ],
+    "learnerState": {
+      "currentApproach": "looking at the value of the items compared to their weights",
+      "activeGap": null,
+      "repairFocus": null,
+      "attemptsWithoutProgress": 0,
+      "supportHistory": [
+        {
+          "turn": 1,
+          "phase": "approach",
+          "action": "CHALLENGE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 2,
+          "phase": "gap",
+          "action": "PROBE",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 3,
+          "phase": "solution",
+          "action": "PROBE",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 4,
+          "phase": "solution",
+          "action": "HINT",
+          "outcome": "no_advance"
+        },
+        {
+          "turn": 5,
+          "phase": "solution",
+          "action": "ASK_ABSTRACTION",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 6,
+          "phase": "abstraction",
+          "action": "ASK_TRANSFER",
+          "outcome": "advanced"
+        },
+        {
+          "turn": 7,
+          "phase": "transfer",
+          "action": "COMPLETE",
+          "outcome": "advanced"
+        }
+      ]
+    },
+    "transcript": [
+      {
+        "role": "coach",
+        "text": "Before coding, how would you choose items A (10,60), B (20,100), C (30,120) for a capacity-50 0/1 knapsack? Explain the steps your approach would take.",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I think I would start by looking at the value of the items compared to their weights, like trying to find the ones that give the most value for the least weight. Then, I might consider which combinations of items fit into the knapsack without exceeding the capacity. I'm not exactly sure how to weigh those combinations against each other yet, but I guess I would keep selecting items until I can't fit any more."
+      },
+      {
+        "role": "coach",
+        "text": "Your approach of evaluating items based on their value-to-weight ratio is a good start, but remember that for the 0/1 knapsack, you can't just keep selecting items until you can't fit any more; you need to consider combinations carefully. How would you decide between including an item or skipping it when you reach the capacity limit?",
+        "action": "CHALLENGE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I think when I reach the capacity limit, I would need to compare the total value of the items I have already included with the value of the new item I'm considering. I guess I would want to see if including that item would increase the overall value enough to justify the weight it adds. If it doesn't, I might skip it, but I'm not entirely sure how to calculate that effectively yet."
+      },
+      {
+        "role": "coach",
+        "text": "When considering whether to include an item, you should evaluate the total weight and value of the items already in the knapsack against the new item's weight and value. If including the new item exceeds the capacity, you need to decide which existing item to remove to maximize the total value. How would you determine which item to remove if you decide to include a new item?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I think I would look at the value-to-weight ratio of the items currently in the knapsack and the new item. If adding the new item makes me exceed the weight limit, I would try to find the item that has the lowest value-to-weight ratio or the least value overall. By removing that item, I could hopefully maximize the total value of the knapsack. But I'm not completely sure if that's the best way to decide which item to remove."
+      },
+      {
+        "role": "coach",
+        "text": "Your approach to removing the item with the lowest value-to-weight ratio is a common strategy, but remember that in the 0/1 knapsack problem, you can't just remove one item to make space; you need to consider the overall combinations of items. How would you evaluate the impact of removing an item on the total value of the knapsack, especially if there are multiple items that could be removed?",
+        "action": "PROBE",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I guess to evaluate the impact of removing an item, I would need to consider all the possible combinations of the remaining items in the knapsack. I would look at the total value of those combinations after removing an item to see if they provide a better value compared to including the new item. It's a bit complicated because I might have to check different combinations to find the best one, and I'm not sure how to efficiently do that."
+      },
+      {
+        "role": "coach",
+        "text": "Instead of evaluating all combinations after removing an item, consider using a dynamic programming approach where you build a table that tracks the maximum value for each capacity incrementally. This way, you can systematically decide whether to include or skip each item based on previously computed values without needing to check all combinations. How would you set up the initial state of your DP table for the given items and capacity?",
+        "action": "HINT",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To set up the initial state of my DP table for the knapsack problem, I would create a table with rows representing each item and columns representing the capacity from 0 to 50. Initially, I would fill the first row (for the case of including no items) with zeros, since if I have a capacity of 0, the maximum value is also 0. For the first column (capacity 0), I would also fill it with zeros because I can't include any items when there's no capacity available. I think I would then gradually fill in the rest of the table based on whether I include or skip each item."
+      },
+      {
+        "role": "coach",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "action": "ASK_ABSTRACTION",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "I think the reusable principle is about maximizing value while respecting the weight capacity of the knapsack. Each decision, whether to include or skip an item, is based on comparing the value it adds against its weight and the total weight already in the knapsack. The capacity constraint is crucial because it limits the total weight I can carry, so I need to make sure that every decision I make doesn't exceed that limit while still trying to achieve the highest possible value."
+      },
+      {
+        "role": "coach",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "action": "ASK_TRANSFER",
+        "visual": null
+      },
+      {
+        "role": "learner",
+        "text": "To check if the numbers [1, 5, 11, 5] can be partitioned into two subsets of equal sum, I would first calculate the total sum of the numbers. The total is 22, so each subset would need to sum up to 11. The include/skip idea transfers here because I can think of each number as something I can either include in one subset or skip to put in the other. My state would represent which numbers I've considered and their corresponding sums up to that point. To ensure each number is used at most once, I would only allow each number to be included in one of the subsets during the selection process."
+      },
+      {
+        "role": "coach",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "action": "COMPLETE",
+        "visual": null
+      }
+    ],
+    "events": [
+      {
+        "kind": "session_started",
+        "phase": "approach"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:18:49.336Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3836,
+        "httpStatus": 200,
+        "requestId": "req_7cac444c14fc417db34ed53a00febffb",
+        "outcome": "success",
+        "responseChars": 708,
+        "promptTokens": 857,
+        "completionTokens": 150,
+        "durationMs": 3628
+      },
+      {
+        "kind": "interpretation",
+        "turn": 1,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "approach_explained",
+            "quote": "looking at the value of the items compared to their weights"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 1,
+        "from": "approach",
+        "to": "gap",
+        "action": "CHALLENGE",
+        "reason": "Latest learner message supports required checkpoint: approach_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:18:52.965Z",
+        "turn": 1,
+        "timeoutMs": 25000,
+        "inputChars": 3313,
+        "httpStatus": 200,
+        "requestId": "req_8ae3850fb2f744a8bd2d630ff8d4c8ff",
+        "outcome": "success",
+        "responseChars": 360,
+        "promptTokens": 747,
+        "completionTokens": 75,
+        "durationMs": 1993
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 1,
+        "action": "CHALLENGE",
+        "text": "Your approach of evaluating items based on their value-to-weight ratio is a good start, but remember that for the 0/1 knapsack, you can't just keep selecting items until you can't fit any more; you need to consider combinations carefully. How would you decide between including an item or skipping it when you reach the capacity limit?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:18:56.968Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4669,
+        "httpStatus": 200,
+        "requestId": "req_ec72766ab7da4a12af0a30f3f63454a2",
+        "outcome": "success",
+        "responseChars": 1365,
+        "promptTokens": 1030,
+        "completionTokens": 272,
+        "durationMs": 6474
+      },
+      {
+        "kind": "interpretation",
+        "turn": 2,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "limitation_explained",
+            "quote": "I'm not entirely sure how to calculate that effectively yet"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 2,
+        "from": "gap",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "Latest learner message supports required checkpoint: limitation_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:03.443Z",
+        "turn": 2,
+        "timeoutMs": 25000,
+        "inputChars": 4075,
+        "httpStatus": 200,
+        "requestId": "req_6b67f68767ef4d12bef56712e77938b3",
+        "outcome": "success",
+        "responseChars": 402,
+        "promptTokens": 905,
+        "completionTokens": 81,
+        "durationMs": 2040
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 2,
+        "action": "PROBE",
+        "text": "When considering whether to include an item, you should evaluate the total weight and value of the items already in the knapsack against the new item's weight and value. If including the new item exceeds the capacity, you need to decide which existing item to remove to maximize the total value. How would you determine which item to remove if you decide to include a new item?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:07.645Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 5602,
+        "httpStatus": 200,
+        "requestId": "req_9f0b3b3826d2455592276c4a90fcbe05",
+        "outcome": "success",
+        "responseChars": 1354,
+        "promptTokens": 1220,
+        "completionTokens": 275,
+        "durationMs": 6288
+      },
+      {
+        "kind": "interpretation",
+        "turn": 3,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 3,
+        "from": "solution",
+        "to": "solution",
+        "action": "PROBE",
+        "reason": "No new grounded correct_method evidence on this turn",
+        "attemptsWithoutProgress": 1
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:13.933Z",
+        "turn": 3,
+        "timeoutMs": 25000,
+        "inputChars": 4256,
+        "httpStatus": 200,
+        "requestId": "req_517a481a201740fbb4dd5404c7499c6f",
+        "outcome": "success",
+        "responseChars": 420,
+        "promptTokens": 958,
+        "completionTokens": 89,
+        "durationMs": 2146
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 3,
+        "action": "PROBE",
+        "text": "Your approach to removing the item with the lowest value-to-weight ratio is a common strategy, but remember that in the 0/1 knapsack problem, you can't just remove one item to make space; you need to consider the overall combinations of items. How would you evaluate the impact of removing an item on the total value of the knapsack, especially if there are multiple items that could be removed?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:18.284Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 6455,
+        "httpStatus": 200,
+        "requestId": "req_af6fb7166ece43e787e41d30de79161a",
+        "outcome": "success",
+        "responseChars": 1263,
+        "promptTokens": 1392,
+        "completionTokens": 257,
+        "durationMs": 5405
+      },
+      {
+        "kind": "interpretation",
+        "turn": 4,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 4,
+        "from": "solution",
+        "to": "solution",
+        "action": "HINT",
+        "reason": "No new grounded correct_method evidence on this turn",
+        "attemptsWithoutProgress": 2
+      },
+      {
+        "kind": "model_request",
+        "stage": "generate",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:23.690Z",
+        "turn": 4,
+        "timeoutMs": 25000,
+        "inputChars": 5117,
+        "httpStatus": 200,
+        "requestId": "req_d210ffe37a914635a330c6d9bdf73cbb",
+        "outcome": "success",
+        "responseChars": 466,
+        "promptTokens": 1125,
+        "completionTokens": 85,
+        "durationMs": 2537
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 4,
+        "action": "HINT",
+        "text": "Instead of evaluating all combinations after removing an item, consider using a dynamic programming approach where you build a table that tracks the maximum value for each capacity incrementally. This way, you can systematically decide whether to include or skip each item based on previously computed values without needing to check all combinations. How would you set up the initial state of your DP table for the given items and capacity?",
+        "visual": null,
+        "source": "llm"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:29.066Z",
+        "turn": 5,
+        "timeoutMs": 25000,
+        "inputChars": 7483,
+        "httpStatus": 200,
+        "requestId": "req_ed8b712eca314becb438050bb2979675",
+        "outcome": "success",
+        "responseChars": 1325,
+        "promptTokens": 1601,
+        "completionTokens": 277,
+        "durationMs": 5489
+      },
+      {
+        "kind": "interpretation",
+        "turn": 5,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "correct_method",
+            "quote": "I would then gradually fill in the rest of the table based on whether I include or skip each item"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 5,
+        "from": "solution",
+        "to": "abstraction",
+        "action": "ASK_ABSTRACTION",
+        "reason": "Latest learner message supports required checkpoint: correct_method",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 5,
+        "action": "ASK_ABSTRACTION",
+        "text": "Without introducing a new problem yet, what reusable principle makes your item-selection algorithm correct? Explain the role of each decision and the capacity constraint.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:36.723Z",
+        "turn": 6,
+        "timeoutMs": 25000,
+        "inputChars": 8295,
+        "httpStatus": 200,
+        "requestId": "req_9e4818f7d207457cbb913a2e1356b36c",
+        "outcome": "success",
+        "responseChars": 1544,
+        "promptTokens": 1755,
+        "completionTokens": 312,
+        "durationMs": 5661
+      },
+      {
+        "kind": "interpretation",
+        "turn": 6,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "principle_explained",
+            "quote": "maximizing value while respecting the weight capacity"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 6,
+        "from": "abstraction",
+        "to": "transfer",
+        "action": "ASK_TRANSFER",
+        "reason": "Latest learner message supports required checkpoint: principle_explained",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 6,
+        "action": "ASK_TRANSFER",
+        "text": "For numbers [1,5,11,5], can they be partitioned into two subsets of equal sum? Explain how the include/skip idea transfers, what your state means, and how you ensure each number is used at most once.",
+        "visual": null,
+        "source": "policy-template"
+      },
+      {
+        "kind": "model_request",
+        "stage": "interpret",
+        "provider": "openai-compatible",
+        "model": "gpt-4o-mini",
+        "endpointHost": "api.openai.com",
+        "startedAt": "2026-11-07T06:19:45.192Z",
+        "turn": 7,
+        "timeoutMs": 25000,
+        "inputChars": 9033,
+        "httpStatus": 200,
+        "requestId": "req_fb22cad0ee2b4ca9b2c1b9362642e42b",
+        "outcome": "success",
+        "responseChars": 1363,
+        "promptTokens": 1913,
+        "completionTokens": 279,
+        "durationMs": 5337
+      },
+      {
+        "kind": "interpretation",
+        "turn": 7,
+        "intent": "reasoning",
+        "status": "progressing",
+        "ambiguous": false,
+        "requestsFullAnswer": false,
+        "evidence": [
+          {
+            "kind": "transfer_applied",
+            "quote": "To ensure each number is used at most once, I would only allow each number to be included in one of the subsets"
+          }
+        ],
+        "repairFocus": null
+      },
+      {
+        "kind": "policy_decision",
+        "turn": 7,
+        "from": "transfer",
+        "to": "complete",
+        "action": "COMPLETE",
+        "reason": "Latest learner message supports required checkpoint: transfer_applied",
+        "attemptsWithoutProgress": 0
+      },
+      {
+        "kind": "coach_reply",
+        "turn": 7,
+        "action": "COMPLETE",
+        "text": "You have applied the take-or-skip principle to equal-subset partitioning and explained how each number is used at most once. This completes the near-transfer activity; it does not establish long-term mastery.",
+        "visual": null,
+        "source": "policy-template"
+      }
+    ],
+    "turn": 7,
+    "complete": true
+  }
+}

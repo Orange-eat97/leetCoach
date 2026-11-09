@@ -1,0 +1,156 @@
+{
+  "judge_version": "a2_v1",
+  "created_at": "20261107T074627Z",
+  "agreement": {
+    "reasoning_alignment": {
+      "n": 20,
+      "agreement": 0.8,
+      "agreement_percent": 80,
+      "kappa": 0.23076923076923098,
+      "expected_agreement": 0.74,
+      "confusion": {
+        "PP": 15,
+        "PF": 3,
+        "FP": 1,
+        "FF": 1
+      }
+    },
+    "evidence_gating": {
+      "n": 20,
+      "agreement": 0.75,
+      "agreement_percent": 75,
+      "kappa": 0.1666666666666668,
+      "expected_agreement": 0.7,
+      "confusion": {
+        "PP": 14,
+        "PF": 1,
+        "FP": 4,
+        "FF": 1
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "conversation_id": "knapsack-pilot-02",
+      "source_version": "knapsack-pilot",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the brute-force approach and the take-or-skip principle, justifying their reasoning throughout the conversation without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "PASS",
+      "reason": "All tutor hints and challenges build on the learner's expressed approach, encouraging exploration of combinations without dismissing the learner's valid initial method.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-05",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem by explaining the need to evaluate combinations and the take-or-skip principle, justifying their reasoning throughout the conversation.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-08",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's hint in turn 9 insists on a dynamic programming approach without considering the learner's expressed method of evaluating combinations, which the learner was still exploring.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-11",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 dismisses the learner's valid approach of using value-to-weight ratios without examining it further, which is a correct alternative method.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "reasoning_alignment",
+      "verdict": "FAIL",
+      "reason": "The tutor's challenge in turn 3 dismisses the learner's correct approach of selecting items based on value without adequately examining it, instead insisting on a specific criterion (weight-to-value ratio) that the learner did not express.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-13",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "FAIL",
+      "reason": "The learner's understanding of the knapsack problem is not fully established, as they repeatedly express a desire to see code instead of demonstrating a complete grasp of the concepts. The tutor's probing does not lead to a clear resolution of the learner's misconceptions.",
+      "prompt_version": "a2_v1",
+      "human": "PASS",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-15",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem and the principles of dynamic programming, justifying their reasoning at each step without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    },
+    {
+      "conversation_id": "final-knapsack-16",
+      "source_version": "final-knapsack",
+      "criterion_id": "evidence_gating",
+      "verdict": "PASS",
+      "reason": "The learner demonstrates a clear understanding of the knapsack problem and the principles of item selection, including the importance of capacity constraints and value maximization. Their reasoning evolves appropriately through the conversation, addressing misconceptions and building on previous knowledge without advancing checkpoints prematurely.",
+      "prompt_version": "a2_v1",
+      "human": "FAIL",
+      "agree": false
+    }
+  ],
+  "final_system_rates": {
+    "reasoning_alignment": {
+      "n": 20,
+      "judge_PASS": 16,
+      "judge_PASS_percent": 80.0,
+      "human_PASS": 18,
+      "human_PASS_percent": 90.0
+    },
+    "evidence_gating": {
+      "n": 20,
+      "judge_PASS": 18,
+      "judge_PASS_percent": 90.0,
+      "human_PASS": 15,
+      "human_PASS_percent": 75.0
+    }
+  },
+  "source_code": {
+    "git_commit": "ffcabd25b6fc701f0ed43df33478599479c7639b",
+    "git_tracked_files_dirty": true,
+    "core_sha256": {
+      "server/engine.mjs": "9bf972f4b020154b20dcca77cdce8c507f6165b65090c8d65a79d53d62ff4b4b",
+      "server/models.mjs": "1e706e82164c32fce5368c2078eadabdd711a1727425febd6323495c9f8e3e66",
+      "server/knapsack.mjs": "882e58e1b25d84d65f6d81ce67035a00eb0d015b45f8434f4d0e1f8655f4aedc",
+      "server/index.mjs": "bd557303de3ac654e17adebbe871cd44991d8590978d2b330fd55c85bd99746a",
+      "src/LiveCoach.tsx": "2fd4ea5e6c85c2114d03f50c0907b0002a30c64dd13881171035d17b87aea1d1",
+      "src/EvaluationPanel.tsx": "db1946f332bfbe53b48e70a55d371eba24dbeda8dbcab8b1e057dba4ef3a66a4"
+    }
+  },
+  "warnings": [
+    "Agreement requires independent human labels; they are not produced by this tool.",
+    "Pass rates are behavioral judgments on this small simulated-learner dataset, not measured learner learning."
+  ]
+}
